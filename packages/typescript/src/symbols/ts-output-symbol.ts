@@ -11,6 +11,7 @@ import {
 } from "@alloy-js/core";
 import { TSOutputScope } from "./scopes.js";
 import { TSModuleScope } from "./ts-module-scope.js";
+// import { ClassDeclarationProps, ClassMemberProps } from "#components/ClassDeclaration.jsx";
 
 // prettier-ignore
 export enum TSSymbolFlags {
@@ -21,11 +22,31 @@ export enum TSSymbolFlags {
   Nullish = 1 << 3,
 }
 
+export type Definition = any;
+// export type DefinitionKinds = {
+//   ClassDeclaration: ClassDeclarationProps;
+//   ClassMember: ClassMemberProps;
+// };
+
+// export type Definition =
+//   {
+//     [K in keyof DefinitionKinds]: {
+//       kind: K;
+//       value: DefinitionKinds[K];
+//     };
+//   }[keyof DefinitionKinds];
+
+interface ClassDeclarationSymbol {
+  
+}
+
 export interface CreateTsSymbolOptions extends OutputSymbolOptions {
   export?: boolean;
   default?: boolean;
   tsFlags?: TSSymbolFlags;
   hasInstanceMembers?: boolean;
+  kind?: string;
+  props?: unknown;
 }
 
 export class TSOutputSymbol extends OutputSymbol {
@@ -46,6 +67,8 @@ export class TSOutputSymbol extends OutputSymbol {
     this.#default = !!options.default;
     this.#tsFlags = options.tsFlags ?? TSSymbolFlags.None;
     this.#hasInstanceMembers = !!options.hasInstanceMembers;
+    this.#props = options.props;
+    this.#kind = options.kind;
     if (
       this.ownerSymbol?.isTypeSymbol ||
       (this.spaces.some((s) => s.key === "types") &&
@@ -135,6 +158,36 @@ export class TSOutputSymbol extends OutputSymbol {
   get hasInstanceMembers() {
     track(this, TrackOpTypes.GET, "hasInstanceMembers");
     return this.#hasInstanceMembers;
+  }
+
+  #props: unknown | undefined;
+  get props() {
+    track(this, TrackOpTypes.GET, "props");
+    return this.#props;
+  }
+
+  set props(value: unknown | undefined) {
+    const oldValue = this.#props;
+    if (oldValue === value) {
+      return;
+    }
+    this.#props = value;
+    trigger(this, TriggerOpTypes.SET, "props", value, oldValue);
+  }
+
+  #kind: string | undefined;
+  get kind() {
+    track(this, TrackOpTypes.GET, "kind");
+    return this.#kind;
+  }
+
+  set kind(value: string | undefined) {
+    const oldValue = this.#kind;
+    if (oldValue === value) {
+      return;
+    }
+    this.#kind = value;
+    trigger(this, TriggerOpTypes.SET, "kind", value, oldValue);
   }
 
   set tsFlags(value: TSSymbolFlags) {

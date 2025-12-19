@@ -87,6 +87,8 @@ export function InterfaceMethod(props: InterfaceMethodProps) {
         {...props}
         refkey={props.refkey}
         nameKind="interface-member"
+        symbolKind="InterfaceMethod"
+        symbolProps={props}
       >
         <MemberName />
         <LexicalScope>

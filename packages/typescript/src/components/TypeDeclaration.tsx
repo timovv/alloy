@@ -13,7 +13,7 @@ export const TypeDeclaration = ensureTypeRefContext(
           <JSDoc children={props.doc} />
           <hbr />
         </Show>
-        <Declaration {...props} nameKind="type">
+        <Declaration {...props} nameKind="type" symbolKind="TypeDeclaration" symbolProps={props}>
           type <Name /> = {props.children};
         </Declaration>
       </>

@@ -52,6 +52,10 @@ export interface DeclarationPropsWithInfo extends DeclarationPropsBase {
    */
   kind?: "type" | "value";
 
+  symbolKind?: string;
+
+  symbolProps?: unknown;
+
   /**
    * Arbitrary metadata about this declaration.
    */
@@ -105,6 +109,8 @@ export function Declaration(props: DeclarationProps) {
         export: props.export,
         default: props.default,
         metadata: props.metadata,
+        props: props.symbolProps,
+        kind: props.symbolKind,
         namePolicy: useTSNamePolicy().for(props.nameKind!),
       });
     } else {
@@ -113,6 +119,8 @@ export function Declaration(props: DeclarationProps) {
         export: props.export,
         default: props.default,
         metadata: props.metadata,
+        props: props.symbolProps,
+        kind: props.symbolKind,
         namePolicy: useTSNamePolicy().for(props.nameKind!),
       });
     }

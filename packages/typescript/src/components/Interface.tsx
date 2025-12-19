@@ -73,6 +73,8 @@ const _InterfaceDeclaration = ensureTypeRefContext(
       default: props.default,
       export: props.export,
       metadata: props.metadata,
+      kind: "InterfaceDeclaration",
+      props,
       tsFlags: TSSymbolFlags.TypeSymbol,
       namePolicy: useTSNamePolicy().for("interface"),
     });
@@ -87,7 +89,7 @@ const _InterfaceDeclaration = ensureTypeRefContext(
           {sTypeParameters}
           {extendsPart}{" "}
           <ExprSlot>
-            <InterfaceExpression>{filteredChildren}</InterfaceExpression>
+            <InterfaceExpression symbol={sym}>{filteredChildren}</InterfaceExpression>
           </ExprSlot>
         </Declaration>
       </>
@@ -111,12 +113,13 @@ export function InterfaceDeclaration(props: InterfaceDeclarationProps) {
 InterfaceDeclaration.TypeParameters = TypeParameters;
 
 export interface InterfaceExpressionProps {
+  symbol?: TSOutputSymbol;
   children?: Children;
 }
 
 export const InterfaceExpression = ensureTypeRefContext(
   (props: InterfaceExpressionProps) => {
-    const symbol = new TSOutputSymbol("", undefined, {
+    const symbol = props.symbol ?? new TSOutputSymbol("", undefined, {
       transient: true,
     });
 
@@ -136,6 +139,7 @@ export interface InterfaceMemberPropsBase {
   type?: Children;
   children?: Children;
   readonly?: boolean;
+  kind?: string;
   doc?: Children;
   refkey?: Refkey | Refkey[];
 }
@@ -182,6 +186,8 @@ export function InterfaceMember(props: InterfaceMemberProps) {
   const scope = useTSMemberScope();
   const sym = new TSOutputSymbol(props.name, scope.ownerSymbol.staticMembers, {
     refkeys: props.refkey,
+    kind: props.kind ?? "InterfaceMember",
+    props,
     tsFlags:
       TSSymbolFlags.TypeSymbol |
       ((props.nullish ?? props.optional) ?

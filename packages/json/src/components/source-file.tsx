@@ -12,6 +12,8 @@ export interface SourceFileProps {
   /** The path for this source file relative to the parent directory */
   path: string;
 
+  reference?: any;
+
   /** The contents of the source file */
   children?: Children;
 }
@@ -37,7 +39,7 @@ export function SourceFile(props: SourceFileProps) {
   });
 
   return (
-    <CoreSourceFile filetype="json" path={props.path} reference={Reference}>
+    <CoreSourceFile filetype="json" path={props.path} reference={props.reference ?? Reference}>
       <SfTapper />
       <JsonFileContext.Provider value={fileContext}>
         {props.children}

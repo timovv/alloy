@@ -4,21 +4,17 @@
   "description": "",
   "exports": {
     ".": {
-      "development": "./src/index.ts",
       "import": "./dist/src/index.js"
     },
     "./stc": {
-      "development": "./src/components/stc/index.ts",
       "import": "./dist/src/components/stc/index.js"
     },
     "./testing": {
-      "development": "./testing/index.ts",
       "import": "./dist/testing/index.js"
     }
   },
   "imports": {
     "#components/*": {
-      "development": "./src/components/*",
       "default": "./dist/src/components/*"
     }
   },

@@ -76,11 +76,14 @@ export function ClassDeclaration(props: ClassDeclarationProps) {
       </For>
     </>
   );
+
   const sym = createTypeAndValueSymbol(props.name, {
     refkeys: props.refkey,
     export: props.export,
     default: props.default,
     metadata: props.metadata,
+    kind: "ClassDeclaration",
+    props,
     hasInstanceMembers: true,
     namePolicy: useTSNamePolicy().for("class"),
   });
@@ -113,6 +116,7 @@ export interface ClassMemberProps {
   children?: Children;
   doc?: Children;
   nullish?: boolean;
+  kind?: string;
 }
 
 export function ClassMember(props: ClassMemberProps) {
@@ -120,10 +124,11 @@ export function ClassMember(props: ClassMemberProps) {
   if (props.nullish) {
     tsFlags |= TSSymbolFlags.Nullish;
   }
-
   const sym = createMemberSymbol(props.name, props, {
     refkeys: props.refkey,
     tsFlags,
+    kind: props.kind ?? "ClassMember",
+    props,
     namePolicy: useTSNamePolicy().for("class-member-data"),
   });
 
@@ -161,7 +166,7 @@ export function ClassField(props: ClassFieldProps) {
   const nullish = props.nullish ?? props.optional;
 
   return (
-    <ClassMember {...props} nullish={nullish}>
+    <ClassMember {...props} kind="ClassField" nullish={nullish}>
       <PropertyName />
       {typeSection}
       {initializerSection}
@@ -189,7 +194,7 @@ export function ClassMethod(props: ClassMethodProps) {
         </JSDoc>
         <hbr />
       </Show>
-      <ClassMember {...rest}>
+      <ClassMember kind="ClassMethod" {...rest}>
         {props.async && "async "}
         <PropertyName />
         <LexicalScope>

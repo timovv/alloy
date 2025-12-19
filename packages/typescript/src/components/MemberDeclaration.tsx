@@ -12,6 +12,8 @@ import {
 
 export interface MemberDeclarationPropsWithInfo
   extends CoreMemberDeclarationPropsWithInfo {
+  symbolKind?: string;
+  symbolProps?: unknown;
   /**
    * The name policy kind to apply to the memberdeclaration.
    */
@@ -47,6 +49,8 @@ export function MemberDeclaration(props: Readonly<MemberDeclarationProps>) {
       refkeys: props.refkey,
       tsFlags,
       metadata: props.metadata,
+      kind: props.symbolKind ?? "MemberDeclaration",
+      props: props.symbolProps,
       namePolicy: useTSNamePolicy().for(props.nameKind!),
     });
   }
