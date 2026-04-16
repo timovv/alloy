@@ -6,30 +6,46 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 export const mod_hash = {
   BuildHasher: { kind: "trait", metadata: { since: "1.7.0" } },
   BuildHasherDefault: {
-    kind: "struct", metadata: { since: "1.7.0" },
+    kind: "struct",
+    metadata: { since: "1.7.0" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "1.85.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.85.0" },
+      },
     },
   },
   DefaultHasher: {
-    kind: "struct", metadata: { since: "1.7.0" },
+    kind: "struct",
+    metadata: { since: "1.7.0" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "1.13.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.13.0" },
+      },
     },
   },
   Hash: { kind: "trait", metadata: { since: "1.0.0" } },
   Hasher: { kind: "trait", metadata: { since: "1.0.0" } },
   RandomState: {
-    kind: "struct", metadata: { since: "1.7.0" },
+    kind: "struct",
+    metadata: { since: "1.7.0" },
     members: {
       new: { kind: "function", associated: true, metadata: { since: "1.7.0" } },
     },
   },
   SipHasher: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_with_keys: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      new_with_keys: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;

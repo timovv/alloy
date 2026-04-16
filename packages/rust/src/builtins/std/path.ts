@@ -7,13 +7,15 @@ export const mod_path = {
   absolute: { kind: "function", metadata: { since: "1.79.0" } },
   Ancestors: { kind: "struct", metadata: { since: "1.28.0" } },
   Component: {
-    kind: "enum", metadata: { since: "1.0.0" },
+    kind: "enum",
+    metadata: { since: "1.0.0" },
     members: {
       as_os_str: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   Components: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_path: { kind: "function", metadata: { since: "1.0.0" } },
     },
@@ -21,7 +23,8 @@ export const mod_path = {
   Display: { kind: "struct", metadata: { since: "1.0.0" } },
   is_separator: { kind: "function", metadata: { since: "1.0.0" } },
   Iter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_path: { kind: "function", metadata: { since: "1.0.0" } },
     },
@@ -30,7 +33,8 @@ export const mod_path = {
   MAIN_SEPARATOR_STR: { kind: "const", metadata: { since: "1.68.0" } },
   NormalizeError: { kind: "struct", metadata: { since: "unstable" } },
   Path: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       absolute: { kind: "function", metadata: { since: "unstable" } },
       ancestors: { kind: "function", metadata: { since: "1.28.0" } },
@@ -59,7 +63,10 @@ export const mod_path = {
       join: { kind: "function", metadata: { since: "1.0.0" } },
       metadata: { kind: "function", metadata: { since: "1.5.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      normalize_lexically: { kind: "function", metadata: { since: "unstable" } },
+      normalize_lexically: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       parent: { kind: "function", metadata: { since: "1.0.0" } },
       read_dir: { kind: "function", metadata: { since: "1.5.0" } },
       read_link: { kind: "function", metadata: { since: "1.5.0" } },
@@ -79,7 +86,8 @@ export const mod_path = {
     },
   },
   PathBuf: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       add_extension: { kind: "function", metadata: { since: "1.91.0" } },
       as_mut_os_string: { kind: "function", metadata: { since: "1.70.0" } },
@@ -103,17 +111,23 @@ export const mod_path = {
       shrink_to_fit: { kind: "function", metadata: { since: "1.44.0" } },
       try_reserve: { kind: "function", metadata: { since: "1.63.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.63.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.44.0" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.44.0" },
+      },
     },
   },
   Prefix: {
-    kind: "enum", metadata: { since: "1.0.0" },
+    kind: "enum",
+    metadata: { since: "1.0.0" },
     members: {
       is_verbatim: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   PrefixComponent: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_os_str: { kind: "function", metadata: { since: "1.0.0" } },
       kind: { kind: "function", metadata: { since: "1.0.0" } },

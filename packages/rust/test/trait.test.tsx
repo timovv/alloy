@@ -208,10 +208,7 @@ describe("TraitDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <TraitDeclaration
-              name="Serialize"
-              pub={true}
-            />
+            <TraitDeclaration name="Serialize" pub={true} />
             <hbr />
             <TraitVisibilityProbe name="Serialize" />
           </SourceFile>

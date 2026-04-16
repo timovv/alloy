@@ -4,8 +4,8 @@ import {
   type OutputSpace,
   shallowReactive,
 } from "@alloy-js/core";
-import { type RustOutputSymbol } from "../symbols/rust-output-symbol.js";
 import { type RustVisibilityProps } from "../components/visibility.js";
+import { type RustOutputSymbol } from "../symbols/rust-output-symbol.js";
 import { RustCrateScope } from "./rust-crate-scope.js";
 import { RustScopeBase } from "./rust-scope.js";
 

@@ -5,7 +5,8 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_vec = {
   Drain: {
-    kind: "struct", metadata: { since: "1.6.0" },
+    kind: "struct",
+    metadata: { since: "1.6.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       as_slice: { kind: "function", metadata: { since: "1.46.0" } },
@@ -13,13 +14,15 @@ export const mod_vec = {
     },
   },
   ExtractIf: {
-    kind: "struct", metadata: { since: "1.87.0" },
+    kind: "struct",
+    metadata: { since: "1.87.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   IntoIter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       as_mut_slice: { kind: "function", metadata: { since: "1.15.0" } },
@@ -27,9 +30,14 @@ export const mod_vec = {
     },
   },
   PeekMut: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      pop: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      pop: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Recyclable: { kind: "trait" },
@@ -54,31 +62,68 @@ export const mod_vec = {
       extend_from_slice: { kind: "function", metadata: { since: "1.6.0" } },
       extend_from_within: { kind: "function", metadata: { since: "1.53.0" } },
       extract_if: { kind: "function", metadata: { since: "1.87.0" } },
-      from_fn: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_parts: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_parts_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_raw_parts: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_raw_parts_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_fn: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_parts: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_parts_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_raw_parts: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_raw_parts_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       insert: { kind: "function", metadata: { since: "1.0.0" } },
       insert_mut: { kind: "function", metadata: { since: "1.95.0" } },
       into_boxed_slice: { kind: "function", metadata: { since: "1.0.0" } },
       into_chunks: { kind: "function", metadata: { since: "unstable" } },
       into_flattened: { kind: "function", metadata: { since: "1.80.0" } },
       into_parts: { kind: "function", metadata: { since: "unstable" } },
-      into_parts_with_alloc: { kind: "function", metadata: { since: "unstable" } },
+      into_parts_with_alloc: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       into_raw_parts: { kind: "function", metadata: { since: "1.93.0" } },
-      into_raw_parts_with_alloc: { kind: "function", metadata: { since: "unstable" } },
+      into_raw_parts_with_alloc: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       is_empty: { kind: "function", metadata: { since: "1.0.0" } },
       leak: { kind: "function", metadata: { since: "1.47.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.39.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.39.0" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       peek_mut: { kind: "function", metadata: { since: "unstable" } },
       pop: { kind: "function", metadata: { since: "1.0.0" } },
       pop_if: { kind: "function", metadata: { since: "1.86.0" } },
       push: { kind: "function", metadata: { since: "1.0.0" } },
       push_mut: { kind: "function", metadata: { since: "1.95.0" } },
-      push_within_capacity: { kind: "function", metadata: { since: "unstable" } },
+      push_within_capacity: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       recycle: { kind: "function", metadata: { since: "unstable" } },
       remove: { kind: "function", metadata: { since: "1.0.0" } },
       reserve: { kind: "function", metadata: { since: "1.0.0" } },
@@ -101,10 +146,26 @@ export const mod_vec = {
       try_reserve_exact: { kind: "function", metadata: { since: "1.57.0" } },
       try_shrink_to: { kind: "function", metadata: { since: "unstable" } },
       try_shrink_to_fit: { kind: "function", metadata: { since: "unstable" } },
-      try_with_capacity: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      try_with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;

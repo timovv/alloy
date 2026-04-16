@@ -29,9 +29,15 @@ export const mod_option = {
       flatten_mut: { kind: "function", metadata: { since: "unstable" } },
       flatten_ref: { kind: "function", metadata: { since: "unstable" } },
       get_or_insert: { kind: "function", metadata: { since: "1.20.0" } },
-      get_or_insert_default: { kind: "function", metadata: { since: "1.83.0" } },
+      get_or_insert_default: {
+        kind: "function",
+        metadata: { since: "1.83.0" },
+      },
       get_or_insert_with: { kind: "function", metadata: { since: "1.20.0" } },
-      get_or_try_insert_with: { kind: "function", metadata: { since: "unstable" } },
+      get_or_try_insert_with: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       insert: { kind: "function", metadata: { since: "1.53.0" } },
       inspect: { kind: "function", metadata: { since: "1.76.0" } },
       into_flat_iter: { kind: "function", metadata: { since: "unstable" } },

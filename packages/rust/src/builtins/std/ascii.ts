@@ -9,12 +9,28 @@ export const mod_ascii = {
     kind: "enum",
     members: {
       as_str: { kind: "function", metadata: { since: "unstable" } },
-      digit: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      digit_unchecked: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      digit: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      digit_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       eq_ignore_case: { kind: "function", metadata: { since: "unstable" } },
       escape_ascii: { kind: "function", metadata: { since: "unstable" } },
-      from_u8: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_u8_unchecked: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_u8: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_u8_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       is_alphabetic: { kind: "function", metadata: { since: "unstable" } },
       is_alphanumeric: { kind: "function", metadata: { since: "unstable" } },
       is_control: { kind: "function", metadata: { since: "unstable" } },

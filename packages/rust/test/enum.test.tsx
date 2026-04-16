@@ -143,10 +143,7 @@ describe("EnumDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <EnumDeclaration
-              name="Status"
-              pub={true}
-            />
+            <EnumDeclaration name="Status" pub={true} />
             <hbr />
             <EnumVisibilityProbe name="Status" />
           </SourceFile>
@@ -343,7 +340,9 @@ describe("EnumVariant", () => {
               <EnumVariant
                 name="Red"
                 doc="The red color."
-                attributes={[<Attribute name="serde" args={'rename = "red"'} />]}
+                attributes={[
+                  <Attribute name="serde" args={'rename = "red"'} />,
+                ]}
               />
             </EnumDeclaration>
           </SourceFile>

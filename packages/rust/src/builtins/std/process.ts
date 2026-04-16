@@ -6,7 +6,8 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 export const mod_process = {
   abort: { kind: "function", metadata: { since: "1.17.0" } },
   Child: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       id: { kind: "function", metadata: { since: "1.3.0" } },
       kill: { kind: "function", metadata: { since: "1.0.0" } },
@@ -19,7 +20,8 @@ export const mod_process = {
   ChildStdin: { kind: "struct", metadata: { since: "1.0.0" } },
   ChildStdout: { kind: "struct", metadata: { since: "1.0.0" } },
   Command: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       arg: { kind: "function", metadata: { since: "1.0.0" } },
       args: { kind: "function", metadata: { since: "1.0.0" } },
@@ -46,13 +48,15 @@ export const mod_process = {
   CommandEnvs: { kind: "struct", metadata: { since: "1.57.0" } },
   exit: { kind: "function", metadata: { since: "1.0.0" } },
   ExitCode: {
-    kind: "struct", metadata: { since: "1.61.0" },
+    kind: "struct",
+    metadata: { since: "1.61.0" },
     members: {
       exit_process: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   ExitStatus: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       code: { kind: "function", metadata: { since: "1.0.0" } },
       exit_ok: { kind: "function", metadata: { since: "unstable" } },
@@ -60,7 +64,8 @@ export const mod_process = {
     },
   },
   ExitStatusError: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       code: { kind: "function" },
       code_nonzero: { kind: "function" },
@@ -69,18 +74,32 @@ export const mod_process = {
   },
   id: { kind: "function", metadata: { since: "1.26.0" } },
   Output: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       exit_ok: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   Stdio: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      inherit: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      inherit: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
       makes_pipe: { kind: "function", metadata: { since: "unstable" } },
-      null: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      piped: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      null: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      piped: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
   Termination: { kind: "trait", metadata: { since: "1.61.0" } },

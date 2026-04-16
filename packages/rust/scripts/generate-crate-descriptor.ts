@@ -168,7 +168,7 @@ const STABILITY_RE =
 function extractStability(item: RustdocItem): string | undefined {
   if (!item.attrs) return undefined;
   for (const attr of item.attrs) {
-    const text = typeof attr === "string" ? attr : attr.other ?? "";
+    const text = typeof attr === "string" ? attr : (attr.other ?? "");
     const match = STABILITY_RE.exec(text);
     if (match) {
       return `${match[1]}.${match[2]}.${match[3]}`;
@@ -291,15 +291,21 @@ function walkModule(
     }
 
     if (kind === "module") {
-      const childPath = modulePath
-        ? `${modulePath}::${child.name}`
-        : child.name;
+      const childPath =
+        modulePath ? `${modulePath}::${child.name}` : child.name;
       walkModule(state, child, childPath);
     } else if (kind === "use") {
       handleUseItem(state, child, modulePath);
     } else if (ACCEPTED_KINDS.has(kind)) {
       const since = extractStability(child);
-      addSymbol(state, modulePath, child.name, mapKind(kind), since, String(childId));
+      addSymbol(
+        state,
+        modulePath,
+        child.name,
+        mapKind(kind),
+        since,
+        String(childId),
+      );
     }
   }
 }
@@ -341,7 +347,14 @@ function handleUseItem(
       }
     } else {
       const since = target ? extractStability(target) : undefined;
-      addSymbol(state, modulePath, name, mapKind(kind), since, String(useInner.id));
+      addSymbol(
+        state,
+        modulePath,
+        name,
+        mapKind(kind),
+        since,
+        String(useInner.id),
+      );
     }
   }
 }
@@ -402,9 +415,23 @@ const PRELUDE_USE_SUPPRESS_KINDS = new Set([
 ]);
 
 const PRIMITIVES = [
-  "bool", "char", "f32", "f64",
-  "i8", "i16", "i32", "i64", "i128", "isize",
-  "u8", "u16", "u32", "u64", "u128", "usize", "str",
+  "bool",
+  "char",
+  "f32",
+  "f64",
+  "i8",
+  "i16",
+  "i32",
+  "i64",
+  "i128",
+  "isize",
+  "u8",
+  "u16",
+  "u32",
+  "u64",
+  "u128",
+  "usize",
+  "str",
 ];
 
 function findChildModule(
@@ -474,11 +501,17 @@ function extractPrelude(
 
   // For edition-specific preludes, the items are glob re-exports
   // of core::prelude::rust_XXXX. We need core's rustdoc to resolve them.
-  const corePreludeModule = coreData
-    ? findChildModule(coreData, coreData.index[coreData.root], "prelude")
+  const corePreludeModule =
+    coreData ?
+      findChildModule(coreData, coreData.index[coreData.root], "prelude")
     : null;
 
-  for (const editionName of ["rust_2015", "rust_2018", "rust_2021", "rust_2024"]) {
+  for (const editionName of [
+    "rust_2015",
+    "rust_2018",
+    "rust_2021",
+    "rust_2024",
+  ]) {
     const edition = editionName.replace("rust_", "");
 
     // Start with v1 types as base
@@ -574,15 +607,71 @@ function generatePreludeFile(
 // ---------------------------------------------------------------------------
 
 const JS_RESERVED = new Set([
-  "abstract", "arguments", "await", "boolean", "break", "byte", "case", "catch",
-  "char", "class", "const", "continue", "debugger", "default", "delete", "do",
-  "double", "else", "enum", "eval", "export", "extends", "false", "final",
-  "finally", "float", "for", "function", "goto", "if", "implements", "import",
-  "in", "instanceof", "int", "interface", "let", "long", "native", "new",
-  "null", "package", "private", "protected", "public", "return", "short",
-  "static", "super", "switch", "synchronized", "this", "throw", "throws",
-  "transient", "true", "try", "typeof", "undefined", "var", "void",
-  "volatile", "while", "with", "yield",
+  "abstract",
+  "arguments",
+  "await",
+  "boolean",
+  "break",
+  "byte",
+  "case",
+  "catch",
+  "char",
+  "class",
+  "const",
+  "continue",
+  "debugger",
+  "default",
+  "delete",
+  "do",
+  "double",
+  "else",
+  "enum",
+  "eval",
+  "export",
+  "extends",
+  "false",
+  "final",
+  "finally",
+  "float",
+  "for",
+  "function",
+  "goto",
+  "if",
+  "implements",
+  "import",
+  "in",
+  "instanceof",
+  "int",
+  "interface",
+  "let",
+  "long",
+  "native",
+  "new",
+  "null",
+  "package",
+  "private",
+  "protected",
+  "public",
+  "return",
+  "short",
+  "static",
+  "super",
+  "switch",
+  "synchronized",
+  "this",
+  "throw",
+  "throws",
+  "transient",
+  "true",
+  "try",
+  "typeof",
+  "undefined",
+  "var",
+  "void",
+  "volatile",
+  "while",
+  "with",
+  "yield",
 ]);
 
 function sanitizeIdentifier(name: string): string {
@@ -710,9 +799,9 @@ function extractMembers(genState: GeneratorState) {
       const item = genState.data.index[sym.itemId];
       if (!item) continue;
 
-      const inner = item.inner?.[sym.kind === "type-alias" ? "type_alias" : sym.kind] as
-        | { impls?: string[] }
-        | undefined;
+      const inner = item.inner?.[
+        sym.kind === "type-alias" ? "type_alias" : sym.kind
+      ] as { impls?: string[] } | undefined;
       if (!inner?.impls) continue;
 
       const members: MemberEntry[] = [];
@@ -730,12 +819,15 @@ function extractMembers(genState: GeneratorState) {
 
         for (const methodId of implInner.items || []) {
           const method = genState.data.index[methodId];
-          if (!method || method.visibility !== "public" || !method.name) continue;
+          if (!method || method.visibility !== "public" || !method.name)
+            continue;
 
           const methodKind = getItemKind(method);
           if (methodKind !== "function") continue;
 
-          const sig = (method.inner?.function as { sig?: { inputs?: [string, unknown][] } })?.sig;
+          const sig = (
+            method.inner?.function as { sig?: { inputs?: [string, unknown][] } }
+          )?.sig;
           const hasSelfReceiver = sig?.inputs?.some(
             ([name]) => name === "self",
           );
@@ -823,9 +915,9 @@ console.log(`\nModules: ${sortedModules.length}, Symbols: ${totalSymbols}`);
 for (const [mod, syms] of sortedModules) {
   const names = syms.map((s) => s.name);
   const display =
-    names.length > 8
-      ? `${names.slice(0, 8).join(", ")}, ... +${names.length - 8}`
-      : names.join(", ");
+    names.length > 8 ?
+      `${names.slice(0, 8).join(", ")}, ... +${names.length - 8}`
+    : names.join(", ");
   console.log(`  ${mod || "(root)"} [${syms.length}]: ${display}`);
 }
 
@@ -862,13 +954,12 @@ function generateModuleFile(
   lines.push(``);
 
   for (const [modulePath, symbols] of moduleEntries) {
-    const varName = modulePath === ""
-      ? "mod_root"
-      : "mod_" + sanitizeIdentifier(modulePath.replace(/::/g, "_"));
+    const varName =
+      modulePath === "" ? "mod_root" : (
+        "mod_" + sanitizeIdentifier(modulePath.replace(/::/g, "_"))
+      );
 
-    lines.push(
-      `export const ${varName} = {`,
-    );
+    lines.push(`export const ${varName} = {`);
     for (const sym of symbols) {
       if (sym.members && sym.members.length > 0) {
         const meta = sym.since ? `, metadata: { since: "${sym.since}" }` : "";
@@ -878,7 +969,9 @@ function generateModuleFile(
         for (const m of sym.members) {
           const mAssoc = m.associated ? ", associated: true" : "";
           const mMeta = m.since ? `, metadata: { since: "${m.since}" }` : "";
-          lines.push(`      ${m.name}: { kind: "${m.kind}"${mAssoc}${mMeta} },`);
+          lines.push(
+            `      ${m.name}: { kind: "${m.kind}"${mAssoc}${mMeta} },`,
+          );
         }
         lines.push(`    },`);
         lines.push(`  },`);
@@ -892,9 +985,7 @@ function generateModuleFile(
         }
       }
     }
-    lines.push(
-      `} as const satisfies Record<string, SymbolDescriptor>;`,
-    );
+    lines.push(`} as const satisfies Record<string, SymbolDescriptor>;`);
     lines.push(``);
   }
 
@@ -902,9 +993,15 @@ function generateModuleFile(
 }
 
 // Write module files
-const moduleFileNames: { varName: string; fileName: string; modulePath: string }[] = [];
+const moduleFileNames: {
+  varName: string;
+  fileName: string;
+  modulePath: string;
+}[] = [];
 
-for (const [topLevel, entries] of [...topLevelModules.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+for (const [topLevel, entries] of [...topLevelModules.entries()].sort(
+  ([a], [b]) => a.localeCompare(b),
+)) {
   const fileName = `${topLevel}.ts`;
   const filePath = join(outDir, fileName);
   const source = generateModuleFile(entries, data.format_version);
@@ -913,9 +1010,10 @@ for (const [topLevel, entries] of [...topLevelModules.entries()].sort(([a], [b])
   // Track for the index file — variable names are prefixed with mod_ to avoid
   // collisions with the crate export name and JS reserved words
   for (const [modulePath] of entries) {
-    const varName = modulePath === ""
-      ? "mod_root"
-      : "mod_" + sanitizeIdentifier(modulePath.replace(/::/g, "_"));
+    const varName =
+      modulePath === "" ? "mod_root" : (
+        "mod_" + sanitizeIdentifier(modulePath.replace(/::/g, "_"))
+      );
     moduleFileNames.push({ varName, fileName, modulePath });
   }
 }
@@ -937,7 +1035,9 @@ for (const [topLevel, entries] of [...topLevelModules.entries()].sort(([a], [b])
     if (!importsByFile.has(fileName)) importsByFile.set(fileName, []);
     importsByFile.get(fileName)!.push(varName);
   }
-  for (const [fileName, vars] of [...importsByFile.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+  for (const [fileName, vars] of [...importsByFile.entries()].sort(([a], [b]) =>
+    a.localeCompare(b),
+  )) {
     const jsName = fileName.replace(".ts", ".js");
     lines.push(`import { ${vars.join(", ")} } from "./${jsName}";`);
   }
@@ -974,18 +1074,23 @@ for (const [topLevel, entries] of [...topLevelModules.entries()].sort(([a], [b])
   lines.push(`export type ${typeName} = CrateRef<typeof ${descriptorName}> &`);
   lines.push(`  SymbolCreator &`);
   lines.push(`  ExternalCrate;`);
-  lines.push(`export const ${sanitizeIdentifier(crateName)}: ${typeName} = createCrate(${descriptorName});`);
+  lines.push(
+    `export const ${sanitizeIdentifier(crateName)}: ${typeName} = createCrate(${descriptorName});`,
+  );
   lines.push(``);
 
   writeFileSync(join(outDir, "index.ts"), lines.join("\n"));
 }
 
-console.log(`\nWrote ${outDir}/ (${topLevelModules.size} module files + index.ts)`);
+console.log(
+  `\nWrote ${outDir}/ (${topLevelModules.size} module files + index.ts)`,
+);
 
 // Write prelude if requested
 if (cli.prelude && preludeModule) {
-  const coreData: RustdocJson | null = cli.preludeSource
-    ? JSON.parse(readFileSync(resolve(cli.preludeSource), "utf-8"))
+  const coreData: RustdocJson | null =
+    cli.preludeSource ?
+      JSON.parse(readFileSync(resolve(cli.preludeSource), "utf-8"))
     : null;
   const preludeSets = extractPrelude(data, preludeModule, coreData);
   const preludeSource = generatePreludeFile(data.format_version, preludeSets);

@@ -22,6 +22,8 @@ export default tsEslint.config(
       "samples/**/*", // for some reason eslint is unhappy with some files in here
       "**/scripts/**/*",
       "**/cmd/**/*",
+      "eng/ralph.mjs",
+      "eng/ralph-logger.mjs",
     ],
   },
   eslint.configs.recommended,

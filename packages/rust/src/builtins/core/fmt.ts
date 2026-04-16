@@ -6,32 +6,45 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 export const mod_fmt = {
   Alignment: { kind: "enum", metadata: { since: "1.28.0" } },
   Arguments: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_str: { kind: "function", metadata: { since: "1.52.0" } },
-      from_str: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_str: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Binary: { kind: "trait", metadata: { since: "1.0.0" } },
   Debug: { kind: "trait", metadata: { since: "1.0.0" } },
   DebugAsHex: { kind: "enum", metadata: { since: "unstable" } },
   DebugList: {
-    kind: "struct", metadata: { since: "1.2.0" },
+    kind: "struct",
+    metadata: { since: "1.2.0" },
     members: {
       entries: { kind: "function", metadata: { since: "1.2.0" } },
       entry: { kind: "function", metadata: { since: "1.2.0" } },
       entry_with: { kind: "function", metadata: { since: "unstable" } },
       finish: { kind: "function", metadata: { since: "1.2.0" } },
-      finish_non_exhaustive: { kind: "function", metadata: { since: "1.83.0" } },
+      finish_non_exhaustive: {
+        kind: "function",
+        metadata: { since: "1.83.0" },
+      },
     },
   },
   DebugMap: {
-    kind: "struct", metadata: { since: "1.2.0" },
+    kind: "struct",
+    metadata: { since: "1.2.0" },
     members: {
       entries: { kind: "function", metadata: { since: "1.2.0" } },
       entry: { kind: "function", metadata: { since: "1.2.0" } },
       finish: { kind: "function", metadata: { since: "1.2.0" } },
-      finish_non_exhaustive: { kind: "function", metadata: { since: "1.83.0" } },
+      finish_non_exhaustive: {
+        kind: "function",
+        metadata: { since: "1.83.0" },
+      },
       key: { kind: "function", metadata: { since: "1.42.0" } },
       key_with: { kind: "function", metadata: { since: "unstable" } },
       value: { kind: "function", metadata: { since: "1.42.0" } },
@@ -39,37 +52,50 @@ export const mod_fmt = {
     },
   },
   DebugSet: {
-    kind: "struct", metadata: { since: "1.2.0" },
+    kind: "struct",
+    metadata: { since: "1.2.0" },
     members: {
       entries: { kind: "function", metadata: { since: "1.2.0" } },
       entry: { kind: "function", metadata: { since: "1.2.0" } },
       entry_with: { kind: "function", metadata: { since: "unstable" } },
       finish: { kind: "function", metadata: { since: "1.2.0" } },
-      finish_non_exhaustive: { kind: "function", metadata: { since: "1.83.0" } },
+      finish_non_exhaustive: {
+        kind: "function",
+        metadata: { since: "1.83.0" },
+      },
     },
   },
   DebugStruct: {
-    kind: "struct", metadata: { since: "1.2.0" },
+    kind: "struct",
+    metadata: { since: "1.2.0" },
     members: {
       field: { kind: "function", metadata: { since: "1.2.0" } },
       field_with: { kind: "function", metadata: { since: "unstable" } },
       finish: { kind: "function", metadata: { since: "1.2.0" } },
-      finish_non_exhaustive: { kind: "function", metadata: { since: "1.53.0" } },
+      finish_non_exhaustive: {
+        kind: "function",
+        metadata: { since: "1.53.0" },
+      },
     },
   },
   DebugTuple: {
-    kind: "struct", metadata: { since: "1.2.0" },
+    kind: "struct",
+    metadata: { since: "1.2.0" },
     members: {
       field: { kind: "function", metadata: { since: "1.2.0" } },
       field_with: { kind: "function", metadata: { since: "unstable" } },
       finish: { kind: "function", metadata: { since: "1.2.0" } },
-      finish_non_exhaustive: { kind: "function", metadata: { since: "1.83.0" } },
+      finish_non_exhaustive: {
+        kind: "function",
+        metadata: { since: "1.83.0" },
+      },
     },
   },
   Display: { kind: "trait", metadata: { since: "1.0.0" } },
   Error: { kind: "struct", metadata: { since: "1.0.0" } },
   Formatter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       align: { kind: "function", metadata: { since: "1.28.0" } },
       alternate: { kind: "function", metadata: { since: "1.5.0" } },
@@ -80,7 +106,11 @@ export const mod_fmt = {
       debug_tuple: { kind: "function", metadata: { since: "1.2.0" } },
       fill: { kind: "function", metadata: { since: "1.5.0" } },
       flags: { kind: "function", metadata: { since: "1.0.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       options: { kind: "function", metadata: { since: "unstable" } },
       pad: { kind: "function", metadata: { since: "1.0.0" } },
       pad_integral: { kind: "function", metadata: { since: "1.0.0" } },
@@ -96,7 +126,8 @@ export const mod_fmt = {
     },
   },
   FormattingOptions: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       align: { kind: "function", metadata: { since: "unstable" } },
       alternate: { kind: "function", metadata: { since: "unstable" } },
@@ -109,12 +140,22 @@ export const mod_fmt = {
       get_fill: { kind: "function", metadata: { since: "unstable" } },
       get_precision: { kind: "function", metadata: { since: "unstable" } },
       get_sign: { kind: "function", metadata: { since: "unstable" } },
-      get_sign_aware_zero_pad: { kind: "function", metadata: { since: "unstable" } },
+      get_sign_aware_zero_pad: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       get_width: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       precision: { kind: "function", metadata: { since: "unstable" } },
       sign: { kind: "function", metadata: { since: "unstable" } },
-      sign_aware_zero_pad: { kind: "function", metadata: { since: "unstable" } },
+      sign_aware_zero_pad: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       width: { kind: "function", metadata: { since: "unstable" } },
     },
   },
@@ -123,10 +164,15 @@ export const mod_fmt = {
   LowerExp: { kind: "trait", metadata: { since: "1.0.0" } },
   LowerHex: { kind: "trait", metadata: { since: "1.0.0" } },
   NumBuffer: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       capacity: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   NumBufferTrait: { kind: "trait", metadata: { since: "unstable" } },

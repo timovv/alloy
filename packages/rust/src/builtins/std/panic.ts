@@ -13,7 +13,11 @@ export const mod_panic = {
   Location: {
     kind: "struct",
     members: {
-      caller: { kind: "function", associated: true, metadata: { since: "1.46.0" } },
+      caller: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.46.0" },
+      },
       column: { kind: "function", metadata: { since: "1.25.0" } },
       file: { kind: "function", metadata: { since: "1.10.0" } },
       file_as_c_str: { kind: "function", metadata: { since: "1.92.0" } },
@@ -22,7 +26,8 @@ export const mod_panic = {
   },
   panic_any: { kind: "function", metadata: { since: "1.51.0" } },
   PanicHookInfo: {
-    kind: "struct", metadata: { since: "1.81.0" },
+    kind: "struct",
+    metadata: { since: "1.81.0" },
     members: {
       can_unwind: { kind: "function", metadata: { since: "unstable" } },
       location: { kind: "function", metadata: { since: "1.10.0" } },
@@ -31,7 +36,8 @@ export const mod_panic = {
     },
   },
   PanicInfo: {
-    kind: "type-alias", metadata: { since: "1.10.0" },
+    kind: "type-alias",
+    metadata: { since: "1.10.0" },
     members: {
       can_unwind: { kind: "function", metadata: { since: "unstable" } },
       location: { kind: "function", metadata: { since: "1.10.0" } },
@@ -40,7 +46,8 @@ export const mod_panic = {
     },
   },
   PanicMessage: {
-    kind: "struct", metadata: { since: "1.81.0" },
+    kind: "struct",
+    metadata: { since: "1.81.0" },
     members: {
       as_str: { kind: "function", metadata: { since: "1.81.0" } },
     },

@@ -5,15 +5,32 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_ffi = {
   CString: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.0.0" } },
       as_bytes_with_nul: { kind: "function", metadata: { since: "1.0.0" } },
       as_c_str: { kind: "function", metadata: { since: "1.20.0" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      from_vec_unchecked: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_vec_with_nul: { kind: "function", associated: true, metadata: { since: "1.58.0" } },
-      from_vec_with_nul_unchecked: { kind: "function", associated: true, metadata: { since: "1.58.0" } },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      from_vec_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_vec_with_nul: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.58.0" },
+      },
+      from_vec_with_nul_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.58.0" },
+      },
       into_boxed_c_str: { kind: "function", metadata: { since: "1.20.0" } },
       into_bytes: { kind: "function", metadata: { since: "1.7.0" } },
       into_bytes_with_nul: { kind: "function", metadata: { since: "1.7.0" } },
@@ -23,21 +40,24 @@ export const mod_ffi = {
     },
   },
   FromVecWithNulError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.58.0" } },
       into_bytes: { kind: "function", metadata: { since: "1.58.0" } },
     },
   },
   IntoStringError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       into_cstring: { kind: "function", metadata: { since: "1.7.0" } },
       utf8_error: { kind: "function", metadata: { since: "1.7.0" } },
     },
   },
   NulError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       into_vec: { kind: "function", metadata: { since: "1.0.0" } },
       nul_position: { kind: "function", metadata: { since: "1.0.0" } },
@@ -47,15 +67,32 @@ export const mod_ffi = {
 
 export const mod_ffi_c_str = {
   CString: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.0.0" } },
       as_bytes_with_nul: { kind: "function", metadata: { since: "1.0.0" } },
       as_c_str: { kind: "function", metadata: { since: "1.20.0" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      from_vec_unchecked: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_vec_with_nul: { kind: "function", associated: true, metadata: { since: "1.58.0" } },
-      from_vec_with_nul_unchecked: { kind: "function", associated: true, metadata: { since: "1.58.0" } },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      from_vec_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_vec_with_nul: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.58.0" },
+      },
+      from_vec_with_nul_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.58.0" },
+      },
       into_boxed_c_str: { kind: "function", metadata: { since: "1.20.0" } },
       into_bytes: { kind: "function", metadata: { since: "1.7.0" } },
       into_bytes_with_nul: { kind: "function", metadata: { since: "1.7.0" } },
@@ -65,21 +102,24 @@ export const mod_ffi_c_str = {
     },
   },
   FromVecWithNulError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.58.0" } },
       into_bytes: { kind: "function", metadata: { since: "1.58.0" } },
     },
   },
   IntoStringError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       into_cstring: { kind: "function", metadata: { since: "1.7.0" } },
       utf8_error: { kind: "function", metadata: { since: "1.7.0" } },
     },
   },
   NulError: {
-    kind: "struct", metadata: { since: "1.64.0" },
+    kind: "struct",
+    metadata: { since: "1.64.0" },
     members: {
       into_vec: { kind: "function", metadata: { since: "1.0.0" } },
       nul_position: { kind: "function", metadata: { since: "1.0.0" } },

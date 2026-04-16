@@ -5,7 +5,8 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_iter = {
   ArrayChunks: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       into_remainder: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -20,7 +21,8 @@ export const mod_iter = {
   empty: { kind: "function", metadata: { since: "1.2.0" } },
   Empty: { kind: "struct", metadata: { since: "1.2.0" } },
   Enumerate: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       next_index: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -52,7 +54,8 @@ export const mod_iter = {
   once_with: { kind: "function", metadata: { since: "1.43.0" } },
   OnceWith: { kind: "struct", metadata: { since: "1.43.0" } },
   Peekable: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       next_if: { kind: "function", metadata: { since: "1.51.0" } },
       next_if_eq: { kind: "function", metadata: { since: "1.51.0" } },
@@ -70,7 +73,8 @@ export const mod_iter = {
   RepeatN: { kind: "struct", metadata: { since: "1.82.0" } },
   RepeatWith: { kind: "struct", metadata: { since: "1.28.0" } },
   Rev: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       into_inner: { kind: "function", metadata: { since: "unstable" } },
     },

@@ -26,7 +26,8 @@ export const mod_range = {
     },
   },
   RangeInclusive: {
-    kind: "struct", metadata: { since: "1.95.0" },
+    kind: "struct",
+    metadata: { since: "1.95.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.95.0" } },
       is_empty: { kind: "function", metadata: { since: "1.95.0" } },
@@ -34,7 +35,8 @@ export const mod_range = {
     },
   },
   RangeInclusiveIter: {
-    kind: "struct", metadata: { since: "1.95.0" },
+    kind: "struct",
+    metadata: { since: "1.95.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -55,31 +57,39 @@ export const mod_range = {
 
 export const mod_range_legacy = {
   Range: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
       is_empty: { kind: "function", metadata: { since: "1.47.0" } },
     },
   },
   RangeFrom: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
     },
   },
   RangeInclusive: {
-    kind: "struct", metadata: { since: "1.26.0" },
+    kind: "struct",
+    metadata: { since: "1.26.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
       end: { kind: "function", metadata: { since: "1.27.0" } },
       into_inner: { kind: "function", metadata: { since: "1.27.0" } },
       is_empty: { kind: "function", metadata: { since: "1.47.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.27.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.27.0" },
+      },
       start: { kind: "function", metadata: { since: "1.27.0" } },
     },
   },
   RangeToInclusive: {
-    kind: "struct", metadata: { since: "1.26.0" },
+    kind: "struct",
+    metadata: { since: "1.26.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
     },

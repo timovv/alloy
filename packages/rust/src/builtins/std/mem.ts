@@ -8,22 +8,44 @@ export const mod_mem = {
   align_of_val: { kind: "function" },
   align_of_val_raw: { kind: "function", metadata: { since: "unstable" } },
   Alignment: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       as_nonzero: { kind: "function", metadata: { since: "unstable" } },
       as_nonzero_usize: { kind: "function", metadata: { since: "unstable" } },
       as_usize: { kind: "function", metadata: { since: "unstable" } },
       log2: { kind: "function", metadata: { since: "unstable" } },
       mask: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_unchecked: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      of: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      of_val: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      of_val_raw: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      of: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      of_val: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      of_val_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Assume: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       and: { kind: "function", metadata: { since: "unstable" } },
       but_not: { kind: "function", metadata: { since: "unstable" } },
@@ -35,21 +57,47 @@ export const mod_mem = {
   Discriminant: { kind: "struct" },
   drop: { kind: "function" },
   DropGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      dismiss: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      dismiss: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   forget: { kind: "function" },
   forget_unsized: { kind: "function", metadata: { since: "unstable" } },
   ManuallyDrop: {
-    kind: "struct", metadata: { since: "1.20.0" },
+    kind: "struct",
+    metadata: { since: "1.20.0" },
     members: {
-      drop: { kind: "function", associated: true, metadata: { since: "1.20.0" } },
-      into_inner: { kind: "function", associated: true, metadata: { since: "1.20.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.20.0" } },
-      take: { kind: "function", associated: true, metadata: { since: "1.42.0" } },
+      drop: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.20.0" },
+      },
+      into_inner: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.20.0" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.20.0" },
+      },
+      take: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.42.0" },
+      },
     },
   },
   MaybeDangling: {
@@ -102,16 +150,22 @@ export const mod_mem_type_info = {
   Struct: { kind: "struct", metadata: { since: "unstable" } },
   Trait: { kind: "struct", metadata: { since: "unstable" } },
   TraitImpl: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       get_vtable: { kind: "function" },
     },
   },
   Tuple: { kind: "struct", metadata: { since: "unstable" } },
   Type: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      of: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      of: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   TypeKind: { kind: "enum", metadata: { since: "unstable" } },

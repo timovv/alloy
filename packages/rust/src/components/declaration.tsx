@@ -1,8 +1,8 @@
 import {
   Children,
   Declaration as CoreDeclaration,
-  Refkey,
   createSymbol,
+  Refkey,
   useBinder,
 } from "@alloy-js/core";
 import { RustElements, useRustNamePolicy } from "../name-policy.js";

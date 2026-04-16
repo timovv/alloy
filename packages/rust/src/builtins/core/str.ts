@@ -6,14 +6,16 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 export const mod_str = {
   Bytes: { kind: "struct", metadata: { since: "1.0.0" } },
   CharIndices: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_str: { kind: "function", metadata: { since: "1.4.0" } },
       offset: { kind: "function", metadata: { since: "1.82.0" } },
     },
   },
   Chars: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_str: { kind: "function", metadata: { since: "1.4.0" } },
     },
@@ -30,7 +32,8 @@ export const mod_str = {
   from_utf8_unchecked_mut: { kind: "function", metadata: { since: "1.20.0" } },
   FromStr: { kind: "trait", metadata: { since: "1.0.0" } },
   Lines: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -43,62 +46,72 @@ export const mod_str = {
   RMatches: { kind: "struct", metadata: { since: "1.2.0" } },
   RMatchIndices: { kind: "struct", metadata: { since: "1.5.0" } },
   RSplit: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   RSplitN: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   RSplitTerminator: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   Split: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   SplitAsciiWhitespace: {
-    kind: "struct", metadata: { since: "1.34.0" },
+    kind: "struct",
+    metadata: { since: "1.34.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   SplitInclusive: {
-    kind: "struct", metadata: { since: "1.51.0" },
+    kind: "struct",
+    metadata: { since: "1.51.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   SplitN: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   SplitTerminator: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   SplitWhitespace: {
-    kind: "struct", metadata: { since: "1.1.0" },
+    kind: "struct",
+    metadata: { since: "1.1.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   utf8_char_width: { kind: "function", metadata: { since: "unstable" } },
   Utf8Chunk: {
-    kind: "struct", metadata: { since: "1.79.0" },
+    kind: "struct",
+    metadata: { since: "1.79.0" },
     members: {
       invalid: { kind: "function", metadata: { since: "1.79.0" } },
       valid: { kind: "function", metadata: { since: "1.79.0" } },
@@ -106,7 +119,8 @@ export const mod_str = {
   },
   Utf8Chunks: { kind: "struct", metadata: { since: "1.79.0" } },
   Utf8Error: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       error_len: { kind: "function", metadata: { since: "1.20.0" } },
       valid_up_to: { kind: "function", metadata: { since: "1.5.0" } },

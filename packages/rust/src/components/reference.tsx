@@ -13,8 +13,9 @@ export interface ReferenceProps {
 }
 
 export function Reference(props: ReferenceProps) {
-  const resolvedRefkey = isRefkey(props.refkey)
-    ? props.refkey
+  const resolvedRefkey =
+    isRefkey(props.refkey) ?
+      props.refkey
     : (props.refkey as RefkeyableObject)[REFKEYABLE]();
   const result = ref(resolvedRefkey);
   const symbolRef = computed(() => result()[1]);

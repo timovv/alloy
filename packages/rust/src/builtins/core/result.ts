@@ -8,7 +8,8 @@ export const mod_result = {
   Iter: { kind: "struct", metadata: { since: "1.0.0" } },
   IterMut: { kind: "struct", metadata: { since: "1.0.0" } },
   Result: {
-    kind: "enum", metadata: { since: "1.0.0" },
+    kind: "enum",
+    metadata: { since: "1.0.0" },
     members: {
       and: { kind: "function", metadata: { since: "1.0.0" } },
       and_then: { kind: "function", metadata: { since: "1.0.0" } },

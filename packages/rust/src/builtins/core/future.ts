@@ -15,7 +15,8 @@ export const mod_future = {
   PollFn: { kind: "struct", metadata: { since: "1.64.0" } },
   ready: { kind: "function", metadata: { since: "1.48.0" } },
   Ready: {
-    kind: "struct", metadata: { since: "1.48.0" },
+    kind: "struct",
+    metadata: { since: "1.48.0" },
     members: {
       into_inner: { kind: "function", metadata: { since: "1.82.0" } },
     },

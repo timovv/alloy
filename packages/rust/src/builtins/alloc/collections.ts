@@ -5,7 +5,8 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_collections = {
   BinaryHeap: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       append: { kind: "function", metadata: { since: "1.11.0" } },
@@ -15,7 +16,11 @@ export const mod_collections = {
       clear: { kind: "function", metadata: { since: "1.0.0" } },
       drain: { kind: "function", metadata: { since: "1.6.0" } },
       drain_sorted: { kind: "function", metadata: { since: "unstable" } },
-      from_raw_vec: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_raw_vec: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_iter_sorted: { kind: "function", metadata: { since: "unstable" } },
       into_sorted_vec: { kind: "function", metadata: { since: "1.5.0" } },
       into_vec: { kind: "function", metadata: { since: "1.5.0" } },
@@ -23,7 +28,11 @@ export const mod_collections = {
       iter: { kind: "function", metadata: { since: "1.0.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       peek: { kind: "function", metadata: { since: "1.0.0" } },
       peek_mut: { kind: "function", metadata: { since: "1.12.0" } },
       pop: { kind: "function", metadata: { since: "1.0.0" } },
@@ -36,12 +45,21 @@ export const mod_collections = {
       shrink_to_fit: { kind: "function", metadata: { since: "1.0.0" } },
       try_reserve: { kind: "function", metadata: { since: "1.63.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.63.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   BTreeMap: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       append: { kind: "function", metadata: { since: "1.11.0" } },
       clear: { kind: "function", metadata: { since: "1.0.0" } },
@@ -67,7 +85,11 @@ export const mod_collections = {
       lower_bound_mut: { kind: "function", metadata: { since: "unstable" } },
       merge: { kind: "function", metadata: { since: "unstable" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       pop_first: { kind: "function", metadata: { since: "1.66.0" } },
       pop_last: { kind: "function", metadata: { since: "1.66.0" } },
       range: { kind: "function", metadata: { since: "1.17.0" } },
@@ -84,7 +106,8 @@ export const mod_collections = {
     },
   },
   BTreeSet: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       append: { kind: "function", metadata: { since: "1.11.0" } },
       clear: { kind: "function", metadata: { since: "1.0.0" } },
@@ -108,7 +131,11 @@ export const mod_collections = {
       lower_bound: { kind: "function", metadata: { since: "unstable" } },
       lower_bound_mut: { kind: "function", metadata: { since: "unstable" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       pop_first: { kind: "function", metadata: { since: "1.66.0" } },
       pop_last: { kind: "function", metadata: { since: "1.66.0" } },
       range: { kind: "function", metadata: { since: "1.17.0" } },
@@ -124,7 +151,8 @@ export const mod_collections = {
     },
   },
   LinkedList: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       append: { kind: "function", metadata: { since: "1.0.0" } },
       back: { kind: "function", metadata: { since: "1.0.0" } },
@@ -142,8 +170,16 @@ export const mod_collections = {
       iter: { kind: "function", metadata: { since: "1.0.0" } },
       iter_mut: { kind: "function", metadata: { since: "1.0.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.39.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.39.0" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       pop_back: { kind: "function", metadata: { since: "1.0.0" } },
       pop_front: { kind: "function", metadata: { since: "1.0.0" } },
       push_back: { kind: "function", metadata: { since: "1.0.0" } },
@@ -156,14 +192,16 @@ export const mod_collections = {
     },
   },
   TryReserveError: {
-    kind: "struct", metadata: { since: "1.57.0" },
+    kind: "struct",
+    metadata: { since: "1.57.0" },
     members: {
       kind: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   TryReserveErrorKind: { kind: "enum", metadata: { since: "unstable" } },
   VecDeque: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       append: { kind: "function", metadata: { since: "1.4.0" } },
@@ -193,14 +231,21 @@ export const mod_collections = {
       len: { kind: "function", metadata: { since: "1.0.0" } },
       make_contiguous: { kind: "function", metadata: { since: "1.48.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       partition_point: { kind: "function", metadata: { since: "1.54.0" } },
       pop_back: { kind: "function", metadata: { since: "1.0.0" } },
       pop_back_if: { kind: "function", metadata: { since: "1.93.0" } },
       pop_front: { kind: "function", metadata: { since: "1.0.0" } },
       pop_front_if: { kind: "function", metadata: { since: "1.93.0" } },
       prepend: { kind: "function", metadata: { since: "unstable" } },
-      prepend_from_within: { kind: "function", metadata: { since: "unstable" } },
+      prepend_from_within: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       push_back: { kind: "function", metadata: { since: "1.0.0" } },
       push_back_mut: { kind: "function", metadata: { since: "1.95.0" } },
       push_front: { kind: "function", metadata: { since: "1.0.0" } },
@@ -227,16 +272,29 @@ export const mod_collections = {
       truncate_front: { kind: "function", metadata: { since: "unstable" } },
       try_reserve: { kind: "function", metadata: { since: "1.57.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.57.0" } },
-      try_with_capacity: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      try_with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;
 
 export const mod_collections_binary_heap = {
   BinaryHeap: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       append: { kind: "function", metadata: { since: "1.11.0" } },
@@ -246,7 +304,11 @@ export const mod_collections_binary_heap = {
       clear: { kind: "function", metadata: { since: "1.0.0" } },
       drain: { kind: "function", metadata: { since: "1.6.0" } },
       drain_sorted: { kind: "function", metadata: { since: "unstable" } },
-      from_raw_vec: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_raw_vec: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_iter_sorted: { kind: "function", metadata: { since: "unstable" } },
       into_sorted_vec: { kind: "function", metadata: { since: "1.5.0" } },
       into_vec: { kind: "function", metadata: { since: "1.5.0" } },
@@ -254,7 +316,11 @@ export const mod_collections_binary_heap = {
       iter: { kind: "function", metadata: { since: "1.0.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       peek: { kind: "function", metadata: { since: "1.0.0" } },
       peek_mut: { kind: "function", metadata: { since: "1.12.0" } },
       pop: { kind: "function", metadata: { since: "1.0.0" } },
@@ -267,39 +333,56 @@ export const mod_collections_binary_heap = {
       shrink_to_fit: { kind: "function", metadata: { since: "1.0.0" } },
       try_reserve: { kind: "function", metadata: { since: "1.63.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.63.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Drain: {
-    kind: "struct", metadata: { since: "1.6.0" },
+    kind: "struct",
+    metadata: { since: "1.6.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   DrainSorted: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   IntoIter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   IntoIterSorted: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   Iter: { kind: "struct", metadata: { since: "1.0.0" } },
   PeekMut: {
-    kind: "struct", metadata: { since: "1.12.0" },
+    kind: "struct",
+    metadata: { since: "1.12.0" },
     members: {
-      pop: { kind: "function", associated: true, metadata: { since: "1.18.0" } },
+      pop: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.18.0" },
+      },
       refresh: { kind: "function", metadata: { since: "unstable" } },
     },
   },
@@ -307,7 +390,8 @@ export const mod_collections_binary_heap = {
 
 export const mod_collections_linked_list = {
   Cursor: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       as_list: { kind: "function", metadata: { since: "unstable" } },
       back: { kind: "function", metadata: { since: "unstable" } },
@@ -321,7 +405,8 @@ export const mod_collections_linked_list = {
     },
   },
   CursorMut: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       as_cursor: { kind: "function", metadata: { since: "unstable" } },
       as_list: { kind: "function", metadata: { since: "unstable" } },
@@ -342,7 +427,10 @@ export const mod_collections_linked_list = {
       push_back: { kind: "function", metadata: { since: "unstable" } },
       push_front: { kind: "function", metadata: { since: "unstable" } },
       remove_current: { kind: "function", metadata: { since: "unstable" } },
-      remove_current_as_list: { kind: "function", metadata: { since: "unstable" } },
+      remove_current_as_list: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       splice_after: { kind: "function", metadata: { since: "unstable" } },
       splice_before: { kind: "function", metadata: { since: "unstable" } },
       split_after: { kind: "function", metadata: { since: "unstable" } },
@@ -354,7 +442,8 @@ export const mod_collections_linked_list = {
   Iter: { kind: "struct", metadata: { since: "1.0.0" } },
   IterMut: { kind: "struct", metadata: { since: "1.0.0" } },
   LinkedList: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       append: { kind: "function", metadata: { since: "1.0.0" } },
       back: { kind: "function", metadata: { since: "1.0.0" } },
@@ -372,8 +461,16 @@ export const mod_collections_linked_list = {
       iter: { kind: "function", metadata: { since: "1.0.0" } },
       iter_mut: { kind: "function", metadata: { since: "1.0.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.39.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.39.0" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       pop_back: { kind: "function", metadata: { since: "1.0.0" } },
       pop_front: { kind: "function", metadata: { since: "1.0.0" } },
       push_back: { kind: "function", metadata: { since: "1.0.0" } },
@@ -390,20 +487,23 @@ export const mod_collections_linked_list = {
 export const mod_collections_vec_deque = {
   Drain: { kind: "struct", metadata: { since: "1.6.0" } },
   ExtractIf: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   IntoIter: { kind: "struct", metadata: { since: "1.0.0" } },
   Iter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_slices: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   IterMut: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_mut_slices: { kind: "function", metadata: { since: "unstable" } },
       as_slices: { kind: "function", metadata: { since: "unstable" } },
@@ -412,7 +512,8 @@ export const mod_collections_vec_deque = {
   },
   Splice: { kind: "struct", metadata: { since: "unstable" } },
   VecDeque: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       append: { kind: "function", metadata: { since: "1.4.0" } },
@@ -442,14 +543,21 @@ export const mod_collections_vec_deque = {
       len: { kind: "function", metadata: { since: "1.0.0" } },
       make_contiguous: { kind: "function", metadata: { since: "1.48.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       partition_point: { kind: "function", metadata: { since: "1.54.0" } },
       pop_back: { kind: "function", metadata: { since: "1.0.0" } },
       pop_back_if: { kind: "function", metadata: { since: "1.93.0" } },
       pop_front: { kind: "function", metadata: { since: "1.0.0" } },
       pop_front_if: { kind: "function", metadata: { since: "1.93.0" } },
       prepend: { kind: "function", metadata: { since: "unstable" } },
-      prepend_from_within: { kind: "function", metadata: { since: "unstable" } },
+      prepend_from_within: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       push_back: { kind: "function", metadata: { since: "1.0.0" } },
       push_back_mut: { kind: "function", metadata: { since: "1.95.0" } },
       push_front: { kind: "function", metadata: { since: "1.0.0" } },
@@ -476,9 +584,21 @@ export const mod_collections_vec_deque = {
       truncate_front: { kind: "function", metadata: { since: "unstable" } },
       try_reserve: { kind: "function", metadata: { since: "1.57.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.57.0" } },
-      try_with_capacity: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      try_with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      with_capacity_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;

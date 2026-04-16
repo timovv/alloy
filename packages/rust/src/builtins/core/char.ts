@@ -9,7 +9,8 @@ export const mod_char_ = {
   decode_utf16: { kind: "function", metadata: { since: "1.9.0" } },
   DecodeUtf16: { kind: "struct", metadata: { since: "1.9.0" } },
   DecodeUtf16Error: {
-    kind: "struct", metadata: { since: "1.9.0" },
+    kind: "struct",
+    metadata: { since: "1.9.0" },
     members: {
       unpaired_surrogate: { kind: "function", metadata: { since: "1.9.0" } },
     },

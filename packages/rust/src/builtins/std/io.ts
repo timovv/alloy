@@ -37,7 +37,8 @@ export const mod_io = {
   },
   BufRead: { kind: "trait", metadata: { since: "1.0.0" } },
   BufReader: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       buffer: { kind: "function", metadata: { since: "1.37.0" } },
       capacity: { kind: "function", metadata: { since: "1.46.0" } },
@@ -47,11 +48,16 @@ export const mod_io = {
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       peek: { kind: "function", metadata: { since: "unstable" } },
       seek_relative: { kind: "function", metadata: { since: "1.53.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
   BufWriter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       buffer: { kind: "function", metadata: { since: "1.37.0" } },
       capacity: { kind: "function", metadata: { since: "1.46.0" } },
@@ -60,12 +66,17 @@ export const mod_io = {
       into_inner: { kind: "function", metadata: { since: "1.0.0" } },
       into_parts: { kind: "function", metadata: { since: "1.56.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
   Bytes: { kind: "struct", metadata: { since: "1.0.0" } },
   Chain: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.20.0" } },
       get_ref: { kind: "function", metadata: { since: "1.20.0" } },
@@ -75,7 +86,8 @@ export const mod_io = {
   const_error: { kind: "symbol", metadata: { since: "unstable" } },
   copy: { kind: "function", metadata: { since: "1.0.0" } },
   Cursor: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.0.0" } },
       get_ref: { kind: "function", metadata: { since: "1.0.0" } },
@@ -90,23 +102,37 @@ export const mod_io = {
   empty: { kind: "function", metadata: { since: "1.0.0" } },
   Empty: { kind: "struct", metadata: { since: "1.0.0" } },
   Error: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       downcast: { kind: "function", metadata: { since: "1.79.0" } },
-      from_raw_os_error: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      from_raw_os_error: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
       get_mut: { kind: "function", metadata: { since: "1.3.0" } },
       get_ref: { kind: "function", metadata: { since: "1.3.0" } },
       into_inner: { kind: "function", metadata: { since: "1.3.0" } },
       kind: { kind: "function", metadata: { since: "1.0.0" } },
-      last_os_error: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      last_os_error: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      other: { kind: "function", associated: true, metadata: { since: "1.74.0" } },
+      other: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.74.0" },
+      },
       raw_os_error: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   ErrorKind: { kind: "enum", metadata: { since: "1.0.0" } },
   IntoInnerError: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       error: { kind: "function", metadata: { since: "1.0.0" } },
       into_error: { kind: "function", metadata: { since: "1.55.0" } },
@@ -115,44 +141,69 @@ export const mod_io = {
     },
   },
   IoSlice: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
       advance: { kind: "function", metadata: { since: "1.81.0" } },
-      advance_slices: { kind: "function", associated: true, metadata: { since: "1.81.0" } },
+      advance_slices: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.81.0" },
+      },
       as_slice: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
     },
   },
   IoSliceMut: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
       advance: { kind: "function", metadata: { since: "1.81.0" } },
-      advance_slices: { kind: "function", associated: true, metadata: { since: "1.81.0" } },
+      advance_slices: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.81.0" },
+      },
       into_slice: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
     },
   },
   IsTerminal: { kind: "trait", metadata: { since: "1.70.0" } },
   Lines: { kind: "struct", metadata: { since: "1.0.0" } },
   LineWriter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.0.0" } },
       get_ref: { kind: "function", metadata: { since: "1.0.0" } },
       into_inner: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
   pipe: { kind: "function", metadata: { since: "1.87.0" } },
   PipeReader: {
-    kind: "struct", metadata: { since: "1.87.0" },
+    kind: "struct",
+    metadata: { since: "1.87.0" },
     members: {
       try_clone: { kind: "function", metadata: { since: "1.87.0" } },
     },
   },
   PipeWriter: {
-    kind: "struct", metadata: { since: "1.87.0" },
+    kind: "struct",
+    metadata: { since: "1.87.0" },
     members: {
       try_clone: { kind: "function", metadata: { since: "1.87.0" } },
     },
@@ -170,7 +221,8 @@ export const mod_io = {
   Split: { kind: "struct", metadata: { since: "1.0.0" } },
   stderr: { kind: "function", metadata: { since: "1.0.0" } },
   Stderr: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       lock: { kind: "function", metadata: { since: "1.0.0" } },
     },
@@ -178,7 +230,8 @@ export const mod_io = {
   StderrLock: { kind: "struct", metadata: { since: "1.0.0" } },
   stdin: { kind: "function", metadata: { since: "1.0.0" } },
   Stdin: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       lines: { kind: "function", metadata: { since: "1.62.0" } },
       lock: { kind: "function", metadata: { since: "1.0.0" } },
@@ -188,14 +241,16 @@ export const mod_io = {
   StdinLock: { kind: "struct", metadata: { since: "1.0.0" } },
   stdout: { kind: "function", metadata: { since: "1.0.0" } },
   Stdout: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       lock: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   StdoutLock: { kind: "struct", metadata: { since: "1.0.0" } },
   Take: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.20.0" } },
       get_ref: { kind: "function", metadata: { since: "1.20.0" } },
@@ -207,7 +262,8 @@ export const mod_io = {
   },
   Write: { kind: "trait", metadata: { since: "1.0.0" } },
   WriterPanicked: {
-    kind: "struct", metadata: { since: "1.56.0" },
+    kind: "struct",
+    metadata: { since: "1.56.0" },
     members: {
       into_inner: { kind: "function", metadata: { since: "1.56.0" } },
     },

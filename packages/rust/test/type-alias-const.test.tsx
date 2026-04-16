@@ -124,10 +124,7 @@ describe("TypeAlias", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <TypeAlias
-              name="ResponseValue"
-              pub={true}
-            >
+            <TypeAlias name="ResponseValue" pub={true}>
               String
             </TypeAlias>
             <hbr />
@@ -252,11 +249,7 @@ describe("ConstDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <ConstDeclaration
-              name="MAX_ITEMS"
-              type="usize"
-              pub={true}
-            >
+            <ConstDeclaration name="MAX_ITEMS" type="usize" pub={true}>
               16
             </ConstDeclaration>
             <hbr />
