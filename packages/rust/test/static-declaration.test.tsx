@@ -108,11 +108,7 @@ describe("StaticDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <StaticDeclaration
-              name="WORKER_COUNT"
-              pub="crate"
-              type="usize"
-            >
+            <StaticDeclaration name="WORKER_COUNT" pub="crate" type="usize">
               4
             </StaticDeclaration>
             <hbr />
@@ -131,11 +127,7 @@ describe("StaticDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <StaticDeclaration
-              name="WORKER_COUNT"
-              pub={true}
-              type="usize"
-            >
+            <StaticDeclaration name="WORKER_COUNT" pub={true} type="usize">
               4
             </StaticDeclaration>
             <hbr />

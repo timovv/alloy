@@ -1,13 +1,13 @@
 import {
-  type Binder,
   createScope,
   createSymbol,
   getSymbolCreatorSymbol,
+  refkey,
   REFKEYABLE,
+  SymbolCreator,
+  type Binder,
   type Refkey,
   type RefkeyableObject,
-  refkey,
-  SymbolCreator,
 } from "@alloy-js/core";
 import { RustCrateScope, RustModuleScope } from "./scopes/index.js";
 import {
@@ -44,10 +44,12 @@ export interface CrateDescriptor<
   modules: TModules;
 }
 
-type SymbolRef<TSymbol extends SymbolDescriptor> =
-  TSymbol extends { members: infer M extends Record<string, MemberDescriptor> }
-    ? RefkeyableObject & { [K in keyof M]: Refkey }
-    : Refkey;
+export type SymbolRef<TSymbol extends SymbolDescriptor> =
+  TSymbol extends (
+    { members: infer M extends Record<string, MemberDescriptor> }
+  ) ?
+    RefkeyableObject & { [K in keyof M]: Refkey }
+  : Refkey;
 
 export type CrateRef<TDescriptor extends CrateDescriptor = CrateDescriptor> = {
   [P in keyof TDescriptor["modules"]]: {
@@ -136,11 +138,7 @@ export function createCrate<
           entry.modulePath,
           descriptor.name,
         );
-        const symbol = createSymbolFromDescriptor(
-          binder,
-          moduleScope,
-          entry,
-        );
+        const symbol = createSymbolFromDescriptor(binder, moduleScope, entry);
         state.createdSymbols.set(entry.symbolRefkey, symbol);
       }
     },
@@ -307,9 +305,7 @@ function createSymbolFromDescriptor(
 
   // Create member symbols on the type's member space
   if (descriptor.members) {
-    for (const [memberName, memberDesc] of Object.entries(
-      descriptor.members,
-    )) {
+    for (const [memberName, memberDesc] of Object.entries(descriptor.members)) {
       const memberRefkey = refkey(
         entry.modules,
         entry.modulePath,
@@ -333,9 +329,9 @@ function createSymbolFromDescriptor(
             FunctionSymbol,
             memberSymbolName,
             symbol.members,
-            memberDesc.associated
-              ? memberOptions
-              : { ...memberOptions, receiverType: "&self" },
+            memberDesc.associated ? memberOptions : (
+              { ...memberOptions, receiverType: "&self" }
+            ),
           );
           break;
         case "field":

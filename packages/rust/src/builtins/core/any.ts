@@ -10,12 +10,16 @@ export const mod_any = {
   type_name: { kind: "function", metadata: { since: "1.38.0" } },
   type_name_of_val: { kind: "function", metadata: { since: "1.76.0" } },
   TypeId: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       info: { kind: "function", metadata: { since: "unstable" } },
       of: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       trait_info_of: { kind: "function", metadata: { since: "unstable" } },
-      trait_info_of_trait_type_id: { kind: "function", metadata: { since: "unstable" } },
+      trait_info_of_trait_type_id: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;

@@ -6,9 +6,14 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 export const mod_error = {
   Error: { kind: "trait" },
   Report: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       pretty: { kind: "function", metadata: { since: "unstable" } },
       show_backtrace: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -20,8 +25,14 @@ export const mod_error = {
       provide_ref_with: { kind: "function", metadata: { since: "unstable" } },
       provide_value: { kind: "function", metadata: { since: "unstable" } },
       provide_value_with: { kind: "function", metadata: { since: "unstable" } },
-      would_be_satisfied_by_ref_of: { kind: "function", metadata: { since: "unstable" } },
-      would_be_satisfied_by_value_of: { kind: "function", metadata: { since: "unstable" } },
+      would_be_satisfied_by_ref_of: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
+      would_be_satisfied_by_value_of: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
     },
   },
   request_ref: { kind: "function" },

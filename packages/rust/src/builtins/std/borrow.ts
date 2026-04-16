@@ -10,8 +10,16 @@ export const mod_borrow = {
     kind: "enum",
     members: {
       into_owned: { kind: "function", metadata: { since: "1.0.0" } },
-      is_borrowed: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      is_owned: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      is_borrowed: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      is_owned: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       to_mut: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },

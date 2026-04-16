@@ -53,9 +53,7 @@ describe("ref() qualified path rendering", () => {
               <EnumVariant name="Pending" refkey={pendingVariant} />
             </EnumDeclaration>
           </SourceFile>
-          <SourceFile path="lib.rs">
-            let s = {pendingVariant};
-          </SourceFile>
+          <SourceFile path="lib.rs">let s = {pendingVariant};</SourceFile>
         </CrateDirectory>
       </Output>,
     ).toRenderTo({
@@ -87,7 +85,13 @@ describe("ref() qualified path rendering", () => {
             </StructDeclaration>
             <hbr />
             <ImplBlock type={structKey}>
-              <FunctionDeclaration pub name="new" refkey={newFn} receiver="none" returnType="Self">
+              <FunctionDeclaration
+                pub
+                name="new"
+                refkey={newFn}
+                receiver="none"
+                returnType="Self"
+              >
                 {"Self { timeout: 30 }"}
               </FunctionDeclaration>
             </ImplBlock>

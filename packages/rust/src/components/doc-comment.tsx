@@ -11,7 +11,11 @@ function renderCommentLines(children: Children, prefix: string) {
   ));
 }
 
-function renderBlockComment(children: Children, openDelim: string, closeDelim: string) {
+function renderBlockComment(
+  children: Children,
+  openDelim: string,
+  closeDelim: string,
+) {
   const lines = String(children).split("\n");
   return (
     <>
@@ -23,8 +27,7 @@ function renderBlockComment(children: Children, openDelim: string, closeDelim: s
           {line}
           <hbr />
         </>
-      ))}
-      {" "}
+      ))}{" "}
       {closeDelim}
       <hbr />
     </>
@@ -32,7 +35,9 @@ function renderBlockComment(children: Children, openDelim: string, closeDelim: s
 }
 
 function isEmptyChildren(children: Children): boolean {
-  return children === undefined || children === null || String(children).length === 0;
+  return (
+    children === undefined || children === null || String(children).length === 0
+  );
 }
 
 // --- Line comments ---

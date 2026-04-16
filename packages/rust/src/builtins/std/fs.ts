@@ -9,14 +9,20 @@ export const mod_fs = {
   create_dir: { kind: "function", metadata: { since: "1.0.0" } },
   create_dir_all: { kind: "function", metadata: { since: "1.0.0" } },
   Dir: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      open: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      open: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       open_file: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   DirBuilder: {
-    kind: "struct", metadata: { since: "1.6.0" },
+    kind: "struct",
+    metadata: { since: "1.6.0" },
     members: {
       create: { kind: "function", metadata: { since: "1.6.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.6.0" } },
@@ -24,7 +30,8 @@ export const mod_fs = {
     },
   },
   DirEntry: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       file_name: { kind: "function", metadata: { since: "1.1.0" } },
       file_type: { kind: "function", metadata: { since: "1.1.0" } },
@@ -34,17 +41,42 @@ export const mod_fs = {
   },
   exists: { kind: "function", metadata: { since: "1.81.0" } },
   File: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      create: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      create_buffered: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      create_new: { kind: "function", associated: true, metadata: { since: "1.77.0" } },
+      create: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      create_buffered: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      create_new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.77.0" },
+      },
       lock: { kind: "function", metadata: { since: "1.89.0" } },
       lock_shared: { kind: "function", metadata: { since: "1.89.0" } },
       metadata: { kind: "function", metadata: { since: "1.0.0" } },
-      open: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      open_buffered: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      options: { kind: "function", associated: true, metadata: { since: "1.58.0" } },
+      open: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      open_buffered: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      options: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.58.0" },
+      },
       set_len: { kind: "function", metadata: { since: "1.0.0" } },
       set_modified: { kind: "function", metadata: { since: "1.75.0" } },
       set_permissions: { kind: "function", metadata: { since: "1.16.0" } },
@@ -58,15 +90,21 @@ export const mod_fs = {
     },
   },
   FileTimes: {
-    kind: "struct", metadata: { since: "1.75.0" },
+    kind: "struct",
+    metadata: { since: "1.75.0" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "1.75.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.75.0" },
+      },
       set_accessed: { kind: "function", metadata: { since: "1.75.0" } },
       set_modified: { kind: "function", metadata: { since: "1.75.0" } },
     },
   },
   FileType: {
-    kind: "struct", metadata: { since: "1.1.0" },
+    kind: "struct",
+    metadata: { since: "1.1.0" },
     members: {
       is_dir: { kind: "function", metadata: { since: "1.1.0" } },
       is_file: { kind: "function", metadata: { since: "1.1.0" } },
@@ -76,7 +114,8 @@ export const mod_fs = {
   hard_link: { kind: "function", metadata: { since: "1.0.0" } },
   metadata: { kind: "function", metadata: { since: "1.0.0" } },
   Metadata: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       accessed: { kind: "function", metadata: { since: "1.10.0" } },
       created: { kind: "function", metadata: { since: "1.10.0" } },
@@ -90,7 +129,8 @@ export const mod_fs = {
     },
   },
   OpenOptions: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       append: { kind: "function", metadata: { since: "1.0.0" } },
       create: { kind: "function", metadata: { since: "1.0.0" } },
@@ -103,7 +143,8 @@ export const mod_fs = {
     },
   },
   Permissions: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       readonly: { kind: "function", metadata: { since: "1.0.0" } },
       set_readonly: { kind: "function", metadata: { since: "1.0.0" } },
@@ -119,7 +160,10 @@ export const mod_fs = {
   remove_file: { kind: "function", metadata: { since: "1.0.0" } },
   rename: { kind: "function", metadata: { since: "1.0.0" } },
   set_permissions: { kind: "function", metadata: { since: "1.1.0" } },
-  set_permissions_nofollow: { kind: "function", metadata: { since: "unstable" } },
+  set_permissions_nofollow: {
+    kind: "function",
+    metadata: { since: "unstable" },
+  },
   set_times: { kind: "function", metadata: { since: "unstable" } },
   set_times_nofollow: { kind: "function", metadata: { since: "unstable" } },
   soft_link: { kind: "function", metadata: { since: "1.0.0" } },

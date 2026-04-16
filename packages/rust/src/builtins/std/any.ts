@@ -15,7 +15,10 @@ export const mod_any = {
       info: { kind: "function", metadata: { since: "unstable" } },
       of: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       trait_info_of: { kind: "function", metadata: { since: "unstable" } },
-      trait_info_of_trait_type_id: { kind: "function", metadata: { since: "unstable" } },
+      trait_info_of_trait_type_id: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;

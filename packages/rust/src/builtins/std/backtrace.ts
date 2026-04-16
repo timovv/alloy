@@ -5,11 +5,24 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_backtrace = {
   Backtrace: {
-    kind: "struct", metadata: { since: "1.65.0" },
+    kind: "struct",
+    metadata: { since: "1.65.0" },
     members: {
-      capture: { kind: "function", associated: true, metadata: { since: "1.65.0" } },
-      disabled: { kind: "function", associated: true, metadata: { since: "1.65.0" } },
-      force_capture: { kind: "function", associated: true, metadata: { since: "1.65.0" } },
+      capture: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.65.0" },
+      },
+      disabled: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.65.0" },
+      },
+      force_capture: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.65.0" },
+      },
       frames: { kind: "function", metadata: { since: "unstable" } },
       status: { kind: "function", metadata: { since: "1.65.0" } },
     },

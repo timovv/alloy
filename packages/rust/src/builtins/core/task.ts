@@ -5,33 +5,64 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_task = {
   Context: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
       ext: { kind: "function", metadata: { since: "unstable" } },
-      from_waker: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
+      from_waker: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
       local_waker: { kind: "function", metadata: { since: "unstable" } },
       waker: { kind: "function", metadata: { since: "1.36.0" } },
     },
   },
   ContextBuilder: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       build: { kind: "function", metadata: { since: "unstable" } },
       ext: { kind: "function", metadata: { since: "unstable" } },
-      from: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_waker: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_waker: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       local_waker: { kind: "function", metadata: { since: "unstable" } },
       waker: { kind: "function", metadata: { since: "unstable" } },
     },
   },
   LocalWaker: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       data: { kind: "function", metadata: { since: "unstable" } },
-      from_fn_ptr: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      noop: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_fn_ptr: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      noop: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       vtable: { kind: "function", metadata: { since: "unstable" } },
       wake: { kind: "function", metadata: { since: "unstable" } },
       wake_by_ref: { kind: "function", metadata: { since: "unstable" } },
@@ -39,7 +70,8 @@ export const mod_task = {
     },
   },
   Poll: {
-    kind: "enum", metadata: { since: "1.36.0" },
+    kind: "enum",
+    metadata: { since: "1.36.0" },
     members: {
       is_pending: { kind: "function", metadata: { since: "1.49.0" } },
       is_ready: { kind: "function", metadata: { since: "1.49.0" } },
@@ -49,26 +81,53 @@ export const mod_task = {
     },
   },
   RawWaker: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
     },
   },
   RawWakerVTable: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
     },
   },
   ready: { kind: "symbol", metadata: { since: "1.64.0" } },
   Waker: {
-    kind: "struct", metadata: { since: "1.36.0" },
+    kind: "struct",
+    metadata: { since: "1.36.0" },
     members: {
       data: { kind: "function", metadata: { since: "1.83.0" } },
-      from_fn_ptr: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "1.36.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.83.0" } },
-      noop: { kind: "function", associated: true, metadata: { since: "1.85.0" } },
+      from_fn_ptr: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.36.0" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.83.0" },
+      },
+      noop: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.85.0" },
+      },
       vtable: { kind: "function", metadata: { since: "1.83.0" } },
       wake: { kind: "function", metadata: { since: "1.36.0" } },
       wake_by_ref: { kind: "function", metadata: { since: "1.36.0" } },

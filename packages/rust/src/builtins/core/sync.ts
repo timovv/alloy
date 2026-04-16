@@ -5,26 +5,43 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_sync = {
   Exclusive: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      from_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_pin_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_pin_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       get_mut: { kind: "function", metadata: { since: "unstable" } },
       get_pin_mut: { kind: "function", metadata: { since: "unstable" } },
       into_inner: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
 } as const satisfies Record<string, SymbolDescriptor>;
 
 export const mod_sync_atomic = {
   Atomic: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       as_ptr: { kind: "function", metadata: { since: "1.70.0" } },
       compare_and_swap: { kind: "function", metadata: { since: "1.0.0" } },
       compare_exchange: { kind: "function", metadata: { since: "1.10.0" } },
-      compare_exchange_weak: { kind: "function", metadata: { since: "1.10.0" } },
+      compare_exchange_weak: {
+        kind: "function",
+        metadata: { since: "1.10.0" },
+      },
       fetch_add: { kind: "function", metadata: { since: "1.34.0" } },
       fetch_and: { kind: "function", metadata: { since: "1.0.0" } },
       fetch_byte_add: { kind: "function", metadata: { since: "1.91.0" } },
@@ -39,15 +56,35 @@ export const mod_sync_atomic = {
       fetch_sub: { kind: "function", metadata: { since: "1.34.0" } },
       fetch_update: { kind: "function", metadata: { since: "1.53.0" } },
       fetch_xor: { kind: "function", metadata: { since: "1.0.0" } },
-      from_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_mut_slice: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_ptr: { kind: "function", associated: true, metadata: { since: "1.75.0" } },
+      from_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_mut_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_ptr: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.75.0" },
+      },
       get_mut: { kind: "function", metadata: { since: "1.15.0" } },
-      get_mut_slice: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      get_mut_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_inner: { kind: "function", metadata: { since: "1.15.0" } },
       load: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      null: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      null: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       store: { kind: "function", metadata: { since: "1.0.0" } },
       swap: { kind: "function", metadata: { since: "1.0.0" } },
       try_update: { kind: "function", metadata: { since: "1.95.0" } },

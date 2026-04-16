@@ -7,11 +7,20 @@ export const mod_borrow = {
   Borrow: { kind: "trait" },
   BorrowMut: { kind: "trait" },
   Cow: {
-    kind: "enum", metadata: { since: "1.0.0" },
+    kind: "enum",
+    metadata: { since: "1.0.0" },
     members: {
       into_owned: { kind: "function", metadata: { since: "1.0.0" } },
-      is_borrowed: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      is_owned: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      is_borrowed: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      is_owned: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       to_mut: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },

@@ -8,7 +8,10 @@ export const mod_root = {
   assert_eq: { kind: "symbol", metadata: { since: "1.0.0" } },
   assert_matches: { kind: "symbol", metadata: { since: "1.95.0" } },
   assert_ne: { kind: "symbol", metadata: { since: "1.13.0" } },
-  assert_unsafe_precondition: { kind: "symbol", metadata: { since: "unstable" } },
+  assert_unsafe_precondition: {
+    kind: "symbol",
+    metadata: { since: "unstable" },
+  },
   cfg: { kind: "symbol", metadata: { since: "1.0.0" } },
   cfg_select: { kind: "symbol", metadata: { since: "1.95.0" } },
   column: { kind: "symbol", metadata: { since: "1.0.0" } },

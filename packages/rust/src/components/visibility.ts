@@ -5,9 +5,9 @@ import {
   memo,
   resolve,
 } from "@alloy-js/core";
-import { type RustVisibility } from "../symbols/rust-output-symbol.js";
-import { buildUsePath } from "../symbols/reference.js";
 import { type RustScopeBase } from "../scopes/rust-scope.js";
+import { buildUsePath } from "../symbols/reference.js";
+import { type RustVisibility } from "../symbols/rust-output-symbol.js";
 
 export interface RustVisibilityProps {
   pub?: boolean | "crate" | "super" | RustVisibility | Refkey;

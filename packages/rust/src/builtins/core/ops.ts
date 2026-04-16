@@ -16,7 +16,8 @@ export const mod_ops = {
   BitXor: { kind: "trait", metadata: { since: "1.0.0" } },
   BitXorAssign: { kind: "trait", metadata: { since: "1.8.0" } },
   Bound: {
-    kind: "enum", metadata: { since: "1.17.0" },
+    kind: "enum",
+    metadata: { since: "1.17.0" },
     members: {
       as_mut: { kind: "function", metadata: { since: "unstable" } },
       as_ref: { kind: "function", metadata: { since: "1.65.0" } },
@@ -28,7 +29,8 @@ export const mod_ops = {
   CoerceShared: { kind: "trait", metadata: { since: "unstable" } },
   CoerceUnsized: { kind: "trait", metadata: { since: "unstable" } },
   ControlFlow: {
-    kind: "enum", metadata: { since: "1.55.0" },
+    kind: "enum",
+    metadata: { since: "1.55.0" },
     members: {
       break_ok: { kind: "function", metadata: { since: "unstable" } },
       break_value: { kind: "function", metadata: { since: "1.83.0" } },
@@ -64,7 +66,8 @@ export const mod_ops = {
   OneSidedRange: { kind: "trait", metadata: { since: "unstable" } },
   OneSidedRangeBound: { kind: "enum", metadata: { since: "unstable" } },
   Range: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
       is_empty: { kind: "function", metadata: { since: "1.47.0" } },
@@ -72,31 +75,39 @@ export const mod_ops = {
   },
   RangeBounds: { kind: "trait", metadata: { since: "1.28.0" } },
   RangeFrom: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
     },
   },
   RangeFull: { kind: "struct", metadata: { since: "1.0.0" } },
   RangeInclusive: {
-    kind: "struct", metadata: { since: "1.26.0" },
+    kind: "struct",
+    metadata: { since: "1.26.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
       end: { kind: "function", metadata: { since: "1.27.0" } },
       into_inner: { kind: "function", metadata: { since: "1.27.0" } },
       is_empty: { kind: "function", metadata: { since: "1.47.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.27.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.27.0" },
+      },
       start: { kind: "function", metadata: { since: "1.27.0" } },
     },
   },
   RangeTo: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
     },
   },
   RangeToInclusive: {
-    kind: "struct", metadata: { since: "1.26.0" },
+    kind: "struct",
+    metadata: { since: "1.26.0" },
     members: {
       contains: { kind: "function", metadata: { since: "1.35.0" } },
     },

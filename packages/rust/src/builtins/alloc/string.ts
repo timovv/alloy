@@ -5,14 +5,16 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_string = {
   Drain: {
-    kind: "struct", metadata: { since: "1.6.0" },
+    kind: "struct",
+    metadata: { since: "1.6.0" },
     members: {
       as_str: { kind: "function", metadata: { since: "1.55.0" } },
     },
   },
   FromUtf16Error: { kind: "struct", metadata: { since: "1.0.0" } },
   FromUtf8Error: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.26.0" } },
       into_bytes: { kind: "function", metadata: { since: "1.0.0" } },
@@ -21,7 +23,8 @@ export const mod_string = {
     },
   },
   IntoChars: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       as_str: { kind: "function", metadata: { since: "unstable" } },
       into_string: { kind: "function", metadata: { since: "unstable" } },
@@ -29,7 +32,8 @@ export const mod_string = {
   },
   ParseError: { kind: "type-alias", metadata: { since: "1.5.0" } },
   String: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_bytes: { kind: "function", metadata: { since: "1.0.0" } },
       as_mut_str: { kind: "function", metadata: { since: "1.7.0" } },
@@ -39,17 +43,61 @@ export const mod_string = {
       clear: { kind: "function", metadata: { since: "1.0.0" } },
       drain: { kind: "function", metadata: { since: "1.6.0" } },
       extend_from_within: { kind: "function", metadata: { since: "1.87.0" } },
-      from_raw_parts: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_utf16: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_utf16_lossy: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_utf16be: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_utf16be_lossy: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_utf16le: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_utf16le_lossy: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_utf8: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_utf8_lossy: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      from_utf8_lossy_owned: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_utf8_unchecked: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      from_raw_parts: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_utf16: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_utf16_lossy: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_utf16be: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_utf16be_lossy: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_utf16le: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_utf16le_lossy: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_utf8: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_utf8_lossy: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
+      from_utf8_lossy_owned: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_utf8_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
       insert: { kind: "function", metadata: { since: "1.0.0" } },
       insert_str: { kind: "function", metadata: { since: "1.16.0" } },
       into_boxed_str: { kind: "function", metadata: { since: "1.4.0" } },
@@ -59,7 +107,11 @@ export const mod_string = {
       is_empty: { kind: "function", metadata: { since: "1.0.0" } },
       leak: { kind: "function", metadata: { since: "1.72.0" } },
       len: { kind: "function", metadata: { since: "1.0.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.39.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.39.0" },
+      },
       pop: { kind: "function", metadata: { since: "1.0.0" } },
       push: { kind: "function", metadata: { since: "1.0.0" } },
       push_str: { kind: "function", metadata: { since: "1.0.0" } },
@@ -77,8 +129,16 @@ export const mod_string = {
       truncate: { kind: "function", metadata: { since: "1.0.0" } },
       try_reserve: { kind: "function", metadata: { since: "1.57.0" } },
       try_reserve_exact: { kind: "function", metadata: { since: "1.57.0" } },
-      try_with_capacity: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      with_capacity: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
+      try_with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      with_capacity: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.0.0" },
+      },
     },
   },
   ToString: { kind: "trait", metadata: { since: "1.0.0" } },

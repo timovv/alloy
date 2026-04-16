@@ -35,7 +35,13 @@ function UseStatementPath(props: UseStatementEntry) {
   );
 
   if (sortedSymbols.length === 1) {
-    return <UseStatement pub={props.pub} path={props.path} symbol={sortedSymbols[0]} />;
+    return (
+      <UseStatement
+        pub={props.pub}
+        path={props.path}
+        symbol={sortedSymbols[0]}
+      />
+    );
   }
 
   return (
@@ -55,7 +61,11 @@ function UseStatementGroup(props: UseStatementGroupProps) {
     <>
       {props.entries.map((entry, index) => (
         <>
-          <UseStatementPath pub={entry.pub} path={entry.path} symbols={entry.symbols} />
+          <UseStatementPath
+            pub={entry.pub}
+            path={entry.path}
+            symbols={entry.symbols}
+          />
           {index < props.entries.length - 1 ?
             <hbr />
           : null}

@@ -5,7 +5,8 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 
 export const mod_time = {
   Duration: {
-    kind: "struct", metadata: { since: "1.3.0" },
+    kind: "struct",
+    metadata: { since: "1.3.0" },
     members: {
       abs_diff: { kind: "function", metadata: { since: "1.81.0" } },
       as_micros: { kind: "function", metadata: { since: "1.33.0" } },
@@ -26,17 +27,61 @@ export const mod_time = {
       div_duration_floor: { kind: "function", metadata: { since: "unstable" } },
       div_f32: { kind: "function", metadata: { since: "1.38.0" } },
       div_f64: { kind: "function", metadata: { since: "1.38.0" } },
-      from_days: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_hours: { kind: "function", associated: true, metadata: { since: "1.91.0" } },
-      from_micros: { kind: "function", associated: true, metadata: { since: "1.27.0" } },
-      from_millis: { kind: "function", associated: true, metadata: { since: "1.3.0" } },
-      from_mins: { kind: "function", associated: true, metadata: { since: "1.91.0" } },
-      from_nanos: { kind: "function", associated: true, metadata: { since: "1.27.0" } },
-      from_nanos_u128: { kind: "function", associated: true, metadata: { since: "1.93.0" } },
-      from_secs: { kind: "function", associated: true, metadata: { since: "1.3.0" } },
-      from_secs_f32: { kind: "function", associated: true, metadata: { since: "1.38.0" } },
-      from_secs_f64: { kind: "function", associated: true, metadata: { since: "1.38.0" } },
-      from_weeks: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_days: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_hours: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.91.0" },
+      },
+      from_micros: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.27.0" },
+      },
+      from_millis: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.3.0" },
+      },
+      from_mins: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.91.0" },
+      },
+      from_nanos: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.27.0" },
+      },
+      from_nanos_u128: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.93.0" },
+      },
+      from_secs: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.3.0" },
+      },
+      from_secs_f32: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.38.0" },
+      },
+      from_secs_f64: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.38.0" },
+      },
+      from_weeks: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       is_zero: { kind: "function", metadata: { since: "1.53.0" } },
       mul_f32: { kind: "function", metadata: { since: "1.38.0" } },
       mul_f64: { kind: "function", metadata: { since: "1.38.0" } },
@@ -47,8 +92,16 @@ export const mod_time = {
       subsec_micros: { kind: "function", metadata: { since: "1.27.0" } },
       subsec_millis: { kind: "function", metadata: { since: "1.27.0" } },
       subsec_nanos: { kind: "function", metadata: { since: "1.3.0" } },
-      try_from_secs_f32: { kind: "function", associated: true, metadata: { since: "1.66.0" } },
-      try_from_secs_f64: { kind: "function", associated: true, metadata: { since: "1.66.0" } },
+      try_from_secs_f32: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.66.0" },
+      },
+      try_from_secs_f64: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.66.0" },
+      },
     },
   },
   TryFromFloatSecsError: { kind: "struct", metadata: { since: "1.66.0" } },

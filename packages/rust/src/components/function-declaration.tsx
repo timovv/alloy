@@ -1,12 +1,12 @@
 import {
   Children,
   Declaration as CoreDeclaration,
+  createScope,
   For,
   Indent,
   Namekey,
   Refkey,
   Scope,
-  createScope,
 } from "@alloy-js/core";
 import { ParameterDescriptor } from "../parameter-descriptor.js";
 import {

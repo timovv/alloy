@@ -9,13 +9,26 @@ export const mod_array = {
   from_ref: { kind: "function", metadata: { since: "1.53.0" } },
   Guard: { kind: "struct" },
   IntoIter: {
-    kind: "struct", metadata: { since: "1.51.0" },
+    kind: "struct",
+    metadata: { since: "1.51.0" },
     members: {
       as_mut_slice: { kind: "function", metadata: { since: "1.51.0" } },
       as_slice: { kind: "function", metadata: { since: "1.51.0" } },
-      empty: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.51.0" } },
-      new_unchecked: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      empty: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.51.0" },
+      },
+      new_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   repeat: { kind: "function", metadata: { since: "1.91.0" } },

@@ -188,10 +188,7 @@ describe("FunctionDeclaration", () => {
       <Output>
         <CrateDirectory name="my_crate">
           <SourceFile path="lib.rs">
-            <FunctionDeclaration
-              name="run-work"
-              pub={true}
-            />
+            <FunctionDeclaration name="run-work" pub={true} />
             <hbr />
             <FunctionFlagsProbe name="run-work" />
           </SourceFile>

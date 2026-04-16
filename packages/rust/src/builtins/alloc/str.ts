@@ -11,7 +11,10 @@ export const mod_str = {
   EscapeDebug: { kind: "struct" },
   EscapeDefault: { kind: "struct" },
   EscapeUnicode: { kind: "struct" },
-  from_boxed_utf8_unchecked: { kind: "function", metadata: { since: "1.20.0" } },
+  from_boxed_utf8_unchecked: {
+    kind: "function",
+    metadata: { since: "1.20.0" },
+  },
   from_raw_parts: { kind: "function" },
   from_raw_parts_mut: { kind: "function" },
   from_utf8: { kind: "function" },

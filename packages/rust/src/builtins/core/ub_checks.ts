@@ -4,6 +4,9 @@ import type { SymbolDescriptor } from "../../create-crate.js";
 // Source: rustdoc JSON format version 57
 
 export const mod_ub_checks = {
-  assert_unsafe_precondition: { kind: "symbol", metadata: { since: "unstable" } },
+  assert_unsafe_precondition: {
+    kind: "symbol",
+    metadata: { since: "unstable" },
+  },
   check_library_ub: { kind: "function" },
 } as const satisfies Record<string, SymbolDescriptor>;

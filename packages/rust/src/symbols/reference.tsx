@@ -1,4 +1,10 @@
-import { Children, Refkey, memo, resolve, unresolvedRefkey } from "@alloy-js/core";
+import {
+  Children,
+  Refkey,
+  memo,
+  resolve,
+  unresolvedRefkey,
+} from "@alloy-js/core";
 import {
   PRELUDE_TYPES,
   PRELUDE_TYPES_2015,
@@ -37,8 +43,9 @@ export function ref(
 
   // Pick the prelude set for the current crate's edition
   const crateContext = useCrateContext();
-  const prelude = crateContext
-    ? (PRELUDE_BY_EDITION[crateContext.edition] ?? PRELUDE_TYPES)
+  const prelude =
+    crateContext ?
+      (PRELUDE_BY_EDITION[crateContext.edition] ?? PRELUDE_TYPES)
     : PRELUDE_TYPES;
 
   return memo(() => {
@@ -73,7 +80,12 @@ export function ref(
       ) {
         if (targetModule !== currentModuleScope) {
           if (targetCrate === sourceCrate) {
-            if (!isVisibleFrom(lexicalDeclaration.visibility, result.fullReferencePath)) {
+            if (
+              !isVisibleFrom(
+                lexicalDeclaration.visibility,
+                result.fullReferencePath,
+              )
+            ) {
               throw new Error(
                 `Cannot reference private symbol '${declarationName}' from module '${currentModuleScope.name}'.`,
               );
@@ -153,7 +165,10 @@ function isVisibleFrom(
   return true;
 }
 
-export function buildUsePath(prefix: string, pathDown: RustScopeBase[]): string {
+export function buildUsePath(
+  prefix: string,
+  pathDown: RustScopeBase[],
+): string {
   const moduleSegments: string[] = [];
 
   for (const scope of pathDown) {

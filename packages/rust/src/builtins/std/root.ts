@@ -8,7 +8,10 @@ export const mod_root = {
   assert_eq: { kind: "symbol" },
   assert_matches: { kind: "symbol" },
   assert_ne: { kind: "symbol" },
-  assert_unsafe_precondition: { kind: "symbol", metadata: { since: "unstable" } },
+  assert_unsafe_precondition: {
+    kind: "symbol",
+    metadata: { since: "unstable" },
+  },
   AsyncFn: { kind: "trait" },
   AsyncFnMut: { kind: "trait" },
   AsyncFnOnce: { kind: "trait" },

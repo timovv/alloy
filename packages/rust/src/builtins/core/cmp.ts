@@ -16,7 +16,8 @@ export const mod_cmp = {
   minmax_by_key: { kind: "function", metadata: { since: "unstable" } },
   Ord: { kind: "trait", metadata: { since: "1.0.0" } },
   Ordering: {
-    kind: "enum", metadata: { since: "1.0.0" },
+    kind: "enum",
+    metadata: { since: "1.0.0" },
     members: {
       is_eq: { kind: "function", metadata: { since: "1.53.0" } },
       is_ge: { kind: "function", metadata: { since: "1.53.0" } },

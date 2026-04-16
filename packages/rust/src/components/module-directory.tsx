@@ -32,7 +32,11 @@ export function ModuleDirectory(props: ModuleDirectoryProps) {
   const moduleName = getModuleName(props.path);
 
   if (scopeParent) {
-    scopeParent.addChildModule({ name: moduleName, pub: props.pub, attributes: props.attributes });
+    scopeParent.addChildModule({
+      name: moduleName,
+      pub: props.pub,
+      attributes: props.attributes,
+    });
   }
 
   const scope = createScope(RustModuleScope, moduleName, scopeParent, {

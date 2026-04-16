@@ -9,13 +9,15 @@ export const mod_slice = {
   ChunkByMut: { kind: "struct", metadata: { since: "1.77.0" } },
   Chunks: { kind: "struct", metadata: { since: "1.0.0" } },
   ChunksExact: {
-    kind: "struct", metadata: { since: "1.31.0" },
+    kind: "struct",
+    metadata: { since: "1.31.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "1.31.0" } },
     },
   },
   ChunksExactMut: {
-    kind: "struct", metadata: { since: "1.31.0" },
+    kind: "struct",
+    metadata: { since: "1.31.0" },
     members: {
       into_remainder: { kind: "function", metadata: { since: "1.31.0" } },
     },
@@ -32,13 +34,15 @@ export const mod_slice = {
   GetDisjointMutError: { kind: "enum" },
   GetDisjointMutIndex: { kind: "trait" },
   Iter: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_slice: { kind: "function", metadata: { since: "1.4.0" } },
     },
   },
   IterMut: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_mut_slice: { kind: "function", metadata: { since: "unstable" } },
       as_slice: { kind: "function", metadata: { since: "1.53.0" } },
@@ -49,13 +53,15 @@ export const mod_slice = {
   range: { kind: "function", metadata: { since: "unstable" } },
   RChunks: { kind: "struct", metadata: { since: "1.31.0" } },
   RChunksExact: {
-    kind: "struct", metadata: { since: "1.31.0" },
+    kind: "struct",
+    metadata: { since: "1.31.0" },
     members: {
       remainder: { kind: "function", metadata: { since: "1.31.0" } },
     },
   },
   RChunksExactMut: {
-    kind: "struct", metadata: { since: "1.31.0" },
+    kind: "struct",
+    metadata: { since: "1.31.0" },
     members: {
       into_remainder: { kind: "function", metadata: { since: "1.31.0" } },
     },
@@ -68,7 +74,8 @@ export const mod_slice = {
   SliceIndex: { kind: "trait", metadata: { since: "1.28.0" } },
   SlicePattern: { kind: "trait" },
   Split: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       as_slice: { kind: "function", metadata: { since: "unstable" } },
     },

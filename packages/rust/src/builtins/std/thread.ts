@@ -8,7 +8,8 @@ export const mod_thread = {
   add_spawn_hook: { kind: "function", metadata: { since: "unstable" } },
   available_parallelism: { kind: "function", metadata: { since: "1.59.0" } },
   Builder: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       name: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
@@ -22,7 +23,8 @@ export const mod_thread = {
   current: { kind: "function", metadata: { since: "1.0.0" } },
   current_id: { kind: "function", metadata: { since: "unstable" } },
   JoinHandle: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       is_finished: { kind: "function", metadata: { since: "1.61.0" } },
       join: { kind: "function", metadata: { since: "1.0.0" } },
@@ -30,7 +32,8 @@ export const mod_thread = {
     },
   },
   LocalKey: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get: { kind: "function", metadata: { since: "1.73.0" } },
       replace: { kind: "function", metadata: { since: "1.73.0" } },
@@ -50,13 +53,15 @@ export const mod_thread = {
   Result: { kind: "type-alias", metadata: { since: "1.0.0" } },
   scope: { kind: "function", metadata: { since: "1.63.0" } },
   Scope: {
-    kind: "struct", metadata: { since: "1.63.0" },
+    kind: "struct",
+    metadata: { since: "1.63.0" },
     members: {
       spawn: { kind: "function", metadata: { since: "1.63.0" } },
     },
   },
   ScopedJoinHandle: {
-    kind: "struct", metadata: { since: "1.63.0" },
+    kind: "struct",
+    metadata: { since: "1.63.0" },
     members: {
       is_finished: { kind: "function", metadata: { since: "1.63.0" } },
       join: { kind: "function", metadata: { since: "1.63.0" } },
@@ -68,9 +73,14 @@ export const mod_thread = {
   sleep_until: { kind: "function", metadata: { since: "unstable" } },
   spawn: { kind: "function", metadata: { since: "1.0.0" } },
   Thread: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      from_raw: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       id: { kind: "function", metadata: { since: "1.19.0" } },
       into_raw: { kind: "function", metadata: { since: "unstable" } },
       name: { kind: "function", metadata: { since: "1.0.0" } },
@@ -78,7 +88,8 @@ export const mod_thread = {
     },
   },
   ThreadId: {
-    kind: "struct", metadata: { since: "1.19.0" },
+    kind: "struct",
+    metadata: { since: "1.19.0" },
     members: {
       as_u64: { kind: "function", metadata: { since: "unstable" } },
     },

@@ -7,76 +7,271 @@ export const mod_sync = {
   Arc: {
     kind: "struct",
     members: {
-      allocator: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      as_ptr: { kind: "function", associated: true, metadata: { since: "1.45.0" } },
+      allocator: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      as_ptr: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.45.0" },
+      },
       assume_init: { kind: "function", metadata: { since: "1.82.0" } },
-      clone_from_ref: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      clone_from_ref_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      decrement_strong_count: { kind: "function", associated: true, metadata: { since: "1.51.0" } },
-      decrement_strong_count_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      clone_from_ref: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      clone_from_ref_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      decrement_strong_count: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.51.0" },
+      },
+      decrement_strong_count_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       downcast: { kind: "function", metadata: { since: "1.29.0" } },
       downcast_unchecked: { kind: "function", metadata: { since: "unstable" } },
-      downgrade: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "1.17.0" } },
-      from_raw_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      get_mut: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      get_mut_unchecked: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      increment_strong_count: { kind: "function", associated: true, metadata: { since: "1.51.0" } },
-      increment_strong_count_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      downgrade: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.17.0" },
+      },
+      from_raw_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      get_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      get_mut_unchecked: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      increment_strong_count: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.51.0" },
+      },
+      increment_strong_count_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_array: { kind: "function", metadata: { since: "unstable" } },
-      into_inner: { kind: "function", associated: true, metadata: { since: "1.70.0" } },
-      into_raw: { kind: "function", associated: true, metadata: { since: "1.17.0" } },
-      into_raw_with_allocator: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      is_unique: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      make_mut: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      into_inner: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.70.0" },
+      },
+      into_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.17.0" },
+      },
+      into_raw_with_allocator: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      is_unique: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      make_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      new_cyclic: { kind: "function", associated: true, metadata: { since: "1.60.0" } },
-      new_cyclic_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_uninit: { kind: "function", associated: true, metadata: { since: "1.82.0" } },
-      new_uninit_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_uninit_slice: { kind: "function", associated: true, metadata: { since: "1.82.0" } },
-      new_uninit_slice_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_zeroed: { kind: "function", associated: true, metadata: { since: "1.92.0" } },
-      new_zeroed_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_zeroed_slice: { kind: "function", associated: true, metadata: { since: "1.92.0" } },
-      new_zeroed_slice_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      pin: { kind: "function", associated: true, metadata: { since: "1.33.0" } },
-      pin_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      ptr_eq: { kind: "function", associated: true, metadata: { since: "1.17.0" } },
-      strong_count: { kind: "function", associated: true, metadata: { since: "1.15.0" } },
-      try_clone_from_ref: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_clone_from_ref_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new_uninit: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new_uninit_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new_zeroed: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_new_zeroed_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_pin: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_pin_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_unwrap: { kind: "function", associated: true, metadata: { since: "1.4.0" } },
-      unwrap_or_clone: { kind: "function", associated: true, metadata: { since: "1.76.0" } },
-      weak_count: { kind: "function", associated: true, metadata: { since: "1.15.0" } },
+      new_cyclic: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.60.0" },
+      },
+      new_cyclic_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_uninit: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.82.0" },
+      },
+      new_uninit_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_uninit_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.82.0" },
+      },
+      new_uninit_slice_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_zeroed: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.92.0" },
+      },
+      new_zeroed_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_zeroed_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.92.0" },
+      },
+      new_zeroed_slice_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      pin: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.33.0" },
+      },
+      pin_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      ptr_eq: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.17.0" },
+      },
+      strong_count: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.15.0" },
+      },
+      try_clone_from_ref: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_clone_from_ref_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new_uninit: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new_uninit_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new_zeroed: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_new_zeroed_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_pin: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_pin_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_unwrap: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.4.0" },
+      },
+      unwrap_or_clone: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.76.0" },
+      },
+      weak_count: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.15.0" },
+      },
     },
   },
   Barrier: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       wait: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   BarrierWaitResult: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       is_leader: { kind: "function", metadata: { since: "1.0.0" } },
     },
   },
   Condvar: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       notify_all: { kind: "function", metadata: { since: "1.0.0" } },
@@ -91,49 +286,114 @@ export const mod_sync = {
   Exclusive: {
     kind: "struct",
     members: {
-      from_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_pin_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_pin_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       get_mut: { kind: "function", metadata: { since: "unstable" } },
       get_pin_mut: { kind: "function", metadata: { since: "unstable" } },
       into_inner: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   LazyLock: {
-    kind: "struct", metadata: { since: "1.80.0" },
+    kind: "struct",
+    metadata: { since: "1.80.0" },
     members: {
-      force: { kind: "function", associated: true, metadata: { since: "1.80.0" } },
-      force_mut: { kind: "function", associated: true, metadata: { since: "1.94.0" } },
-      get: { kind: "function", associated: true, metadata: { since: "1.94.0" } },
-      get_mut: { kind: "function", associated: true, metadata: { since: "1.94.0" } },
-      into_inner: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.80.0" } },
+      force: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.80.0" },
+      },
+      force_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.94.0" },
+      },
+      get: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.94.0" },
+      },
+      get_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.94.0" },
+      },
+      into_inner: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.80.0" },
+      },
     },
   },
   LockResult: { kind: "type-alias", metadata: { since: "1.0.0" } },
   MappedMutexGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockReadGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockWriteGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Mutex: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       clear_poison: { kind: "function", metadata: { since: "1.77.0" } },
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
@@ -149,14 +409,24 @@ export const mod_sync = {
     },
   },
   MutexGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Once: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       call_once: { kind: "function", metadata: { since: "1.0.0" } },
       call_once_force: { kind: "function", metadata: { since: "1.51.0" } },
@@ -168,16 +438,24 @@ export const mod_sync = {
   },
   ONCE_INIT: { kind: "const", metadata: { since: "1.0.0" } },
   OnceLock: {
-    kind: "struct", metadata: { since: "1.70.0" },
+    kind: "struct",
+    metadata: { since: "1.70.0" },
     members: {
       get: { kind: "function", metadata: { since: "1.70.0" } },
       get_mut: { kind: "function", metadata: { since: "1.70.0" } },
       get_mut_or_init: { kind: "function", metadata: { since: "unstable" } },
-      get_mut_or_try_init: { kind: "function", metadata: { since: "unstable" } },
+      get_mut_or_try_init: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
       get_or_init: { kind: "function", metadata: { since: "1.70.0" } },
       get_or_try_init: { kind: "function", metadata: { since: "unstable" } },
       into_inner: { kind: "function", metadata: { since: "1.70.0" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.70.0" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.70.0" },
+      },
       set: { kind: "function", metadata: { since: "1.70.0" } },
       take: { kind: "function", metadata: { since: "1.70.0" } },
       try_insert: { kind: "function", metadata: { since: "unstable" } },
@@ -185,13 +463,15 @@ export const mod_sync = {
     },
   },
   OnceState: {
-    kind: "struct", metadata: { since: "1.51.0" },
+    kind: "struct",
+    metadata: { since: "1.51.0" },
     members: {
       is_poisoned: { kind: "function", metadata: { since: "1.51.0" } },
     },
   },
   PoisonError: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.2.0" } },
       get_ref: { kind: "function", metadata: { since: "1.2.0" } },
@@ -200,7 +480,8 @@ export const mod_sync = {
     },
   },
   ReentrantLock: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
       get_mut: { kind: "function" },
@@ -211,7 +492,8 @@ export const mod_sync = {
   },
   ReentrantLockGuard: { kind: "struct", metadata: { since: "unstable" } },
   RwLock: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       clear_poison: { kind: "function", metadata: { since: "1.77.0" } },
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
@@ -229,18 +511,40 @@ export const mod_sync = {
     },
   },
   RwLockReadGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   RwLockWriteGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      downgrade: { kind: "function", associated: true, metadata: { since: "1.92.0" } },
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      downgrade: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.92.0" },
+      },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   TryLockError: { kind: "enum", metadata: { since: "1.0.0" } },
@@ -248,16 +552,41 @@ export const mod_sync = {
   UniqueArc: {
     kind: "struct",
     members: {
-      downgrade: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      into_arc: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      try_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      downgrade: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      into_arc: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      try_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   WaitTimeoutResult: {
-    kind: "struct", metadata: { since: "1.5.0" },
+    kind: "struct",
+    metadata: { since: "1.5.0" },
     members: {
       timed_out: { kind: "function", metadata: { since: "1.5.0" } },
     },
@@ -267,12 +596,31 @@ export const mod_sync = {
     members: {
       allocator: { kind: "function", metadata: { since: "unstable" } },
       as_ptr: { kind: "function", metadata: { since: "1.45.0" } },
-      from_raw: { kind: "function", associated: true, metadata: { since: "1.45.0" } },
-      from_raw_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      from_raw: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.45.0" },
+      },
+      from_raw_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_raw: { kind: "function", metadata: { since: "1.45.0" } },
-      into_raw_with_allocator: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "1.10.0" } },
-      new_in: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      into_raw_with_allocator: {
+        kind: "function",
+        metadata: { since: "unstable" },
+      },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.10.0" },
+      },
+      new_in: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       ptr_eq: { kind: "function", metadata: { since: "1.39.0" } },
       strong_count: { kind: "function", metadata: { since: "1.41.0" } },
       upgrade: { kind: "function", metadata: { since: "1.4.0" } },
@@ -288,7 +636,10 @@ export const mod_sync_atomic = {
       as_ptr: { kind: "function", metadata: { since: "1.70.0" } },
       compare_and_swap: { kind: "function", metadata: { since: "1.0.0" } },
       compare_exchange: { kind: "function", metadata: { since: "1.10.0" } },
-      compare_exchange_weak: { kind: "function", metadata: { since: "1.10.0" } },
+      compare_exchange_weak: {
+        kind: "function",
+        metadata: { since: "1.10.0" },
+      },
       fetch_add: { kind: "function", metadata: { since: "1.34.0" } },
       fetch_and: { kind: "function", metadata: { since: "1.0.0" } },
       fetch_byte_add: { kind: "function", metadata: { since: "1.91.0" } },
@@ -303,15 +654,35 @@ export const mod_sync_atomic = {
       fetch_sub: { kind: "function", metadata: { since: "1.34.0" } },
       fetch_update: { kind: "function", metadata: { since: "1.53.0" } },
       fetch_xor: { kind: "function", metadata: { since: "1.0.0" } },
-      from_mut: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_mut_slice: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      from_ptr: { kind: "function", associated: true, metadata: { since: "1.75.0" } },
+      from_mut: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_mut_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      from_ptr: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.75.0" },
+      },
       get_mut: { kind: "function", metadata: { since: "1.15.0" } },
-      get_mut_slice: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      get_mut_slice: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       into_inner: { kind: "function", metadata: { since: "1.15.0" } },
       load: { kind: "function", metadata: { since: "1.0.0" } },
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
-      null: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      null: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       store: { kind: "function", metadata: { since: "1.0.0" } },
       swap: { kind: "function", metadata: { since: "1.0.0" } },
       try_update: { kind: "function", metadata: { since: "1.95.0" } },
@@ -347,7 +718,8 @@ export const mod_sync_mpmc = {
   IntoIter: { kind: "struct", metadata: { since: "unstable" } },
   Iter: { kind: "struct", metadata: { since: "unstable" } },
   Receiver: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       capacity: { kind: "function", metadata: { since: "unstable" } },
       is_disconnected: { kind: "function", metadata: { since: "unstable" } },
@@ -364,7 +736,8 @@ export const mod_sync_mpmc = {
     },
   },
   Sender: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       capacity: { kind: "function", metadata: { since: "unstable" } },
       is_disconnected: { kind: "function", metadata: { since: "unstable" } },
@@ -387,7 +760,8 @@ export const mod_sync_mpsc = {
   IntoIter: { kind: "struct", metadata: { since: "1.1.0" } },
   Iter: { kind: "struct", metadata: { since: "1.0.0" } },
   Receiver: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       is_disconnected: { kind: "function", metadata: { since: "unstable" } },
       iter: { kind: "function", metadata: { since: "1.0.0" } },
@@ -401,7 +775,8 @@ export const mod_sync_mpsc = {
   RecvError: { kind: "struct", metadata: { since: "1.0.0" } },
   RecvTimeoutError: { kind: "enum", metadata: { since: "1.12.0" } },
   Sender: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       is_disconnected: { kind: "function", metadata: { since: "unstable" } },
       send: { kind: "function", metadata: { since: "1.0.0" } },
@@ -410,7 +785,8 @@ export const mod_sync_mpsc = {
   SendError: { kind: "struct", metadata: { since: "1.0.0" } },
   sync_channel: { kind: "function", metadata: { since: "1.0.0" } },
   SyncSender: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       send: { kind: "function", metadata: { since: "1.0.0" } },
       try_send: { kind: "function", metadata: { since: "1.0.0" } },
@@ -423,9 +799,14 @@ export const mod_sync_mpsc = {
 
 export const mod_sync_nonpoison = {
   Condvar: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       notify_all: { kind: "function", metadata: { since: "unstable" } },
       notify_one: { kind: "function", metadata: { since: "unstable" } },
       wait: { kind: "function", metadata: { since: "unstable" } },
@@ -435,35 +816,67 @@ export const mod_sync_nonpoison = {
     },
   },
   MappedMutexGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockReadGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockWriteGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Mutex: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
       get_cloned: { kind: "function", metadata: { since: "unstable" } },
       get_mut: { kind: "function", metadata: { since: "unstable" } },
       into_inner: { kind: "function", metadata: { since: "unstable" } },
       lock: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       replace: { kind: "function", metadata: { since: "unstable" } },
       set: { kind: "function", metadata: { since: "unstable" } },
       try_lock: { kind: "function", metadata: { since: "unstable" } },
@@ -471,20 +884,34 @@ export const mod_sync_nonpoison = {
     },
   },
   MutexGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   RwLock: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
       get_cloned: { kind: "function", metadata: { since: "unstable" } },
       get_mut: { kind: "function", metadata: { since: "unstable" } },
       into_inner: { kind: "function", metadata: { since: "unstable" } },
-      new: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      new: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
       read: { kind: "function", metadata: { since: "unstable" } },
       replace: { kind: "function", metadata: { since: "unstable" } },
       set: { kind: "function", metadata: { since: "unstable" } },
@@ -496,18 +923,40 @@ export const mod_sync_nonpoison = {
     },
   },
   RwLockReadGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   RwLockWriteGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      downgrade: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      downgrade: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   TryLockResult: { kind: "type-alias", metadata: { since: "unstable" } },
@@ -517,7 +966,8 @@ export const mod_sync_nonpoison = {
 export const mod_sync_oneshot = {
   channel: { kind: "function", metadata: { since: "unstable" } },
   Receiver: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       recv: { kind: "function", metadata: { since: "unstable" } },
       recv_deadline: { kind: "function", metadata: { since: "unstable" } },
@@ -527,7 +977,8 @@ export const mod_sync_oneshot = {
   },
   RecvTimeoutError: { kind: "enum", metadata: { since: "unstable" } },
   Sender: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
       send: { kind: "function", metadata: { since: "unstable" } },
     },
@@ -537,7 +988,8 @@ export const mod_sync_oneshot = {
 
 export const mod_sync_poison = {
   Condvar: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       new: { kind: "function", associated: true, metadata: { since: "1.0.0" } },
       notify_all: { kind: "function", metadata: { since: "1.0.0" } },
@@ -551,28 +1003,56 @@ export const mod_sync_poison = {
   },
   LockResult: { kind: "type-alias", metadata: { since: "1.0.0" } },
   MappedMutexGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockReadGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   MappedRwLockWriteGuard: {
-    kind: "struct", metadata: { since: "unstable" },
+    kind: "struct",
+    metadata: { since: "unstable" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   Mutex: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       clear_poison: { kind: "function", metadata: { since: "1.77.0" } },
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
@@ -588,14 +1068,24 @@ export const mod_sync_poison = {
     },
   },
   MutexGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   PoisonError: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       get_mut: { kind: "function", metadata: { since: "1.2.0" } },
       get_ref: { kind: "function", metadata: { since: "1.2.0" } },
@@ -604,7 +1094,8 @@ export const mod_sync_poison = {
     },
   },
   RwLock: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
       clear_poison: { kind: "function", metadata: { since: "1.77.0" } },
       data_ptr: { kind: "function", metadata: { since: "unstable" } },
@@ -622,18 +1113,40 @@ export const mod_sync_poison = {
     },
   },
   RwLockReadGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   RwLockWriteGuard: {
-    kind: "struct", metadata: { since: "1.0.0" },
+    kind: "struct",
+    metadata: { since: "1.0.0" },
     members: {
-      downgrade: { kind: "function", associated: true, metadata: { since: "1.92.0" } },
-      filter_map: { kind: "function", associated: true, metadata: { since: "unstable" } },
-      map: { kind: "function", associated: true, metadata: { since: "unstable" } },
+      downgrade: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "1.92.0" },
+      },
+      filter_map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
+      map: {
+        kind: "function",
+        associated: true,
+        metadata: { since: "unstable" },
+      },
     },
   },
   TryLockError: { kind: "enum", metadata: { since: "1.0.0" } },
